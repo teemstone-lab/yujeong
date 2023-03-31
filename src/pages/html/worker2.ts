@@ -9,7 +9,6 @@ const createHostList = ({
 	hostLength: number;
 	isOnAllTrue: boolean;
 }) => {
-	// 왜 리절트를 선언하지?
 	const result = [];
 
 	for (let index = 0; index < hostLength; index++) {
@@ -19,10 +18,10 @@ const createHostList = ({
 			cpu: parseInt(`${Math.random() * 100}`),
 			isOn: isOnAllTrue ? true : randomBoolean,
 		};
-		// console.log(resultItem);
+
 		result.push(resultItem);
 	}
-	//아, 포문 내부에서는 값을 뭉칠 수가 없으니, 외부 변수 리절트에 모아서, 그 바구니를 반환하나보네.
+
 	return result;
 };
 
@@ -33,5 +32,6 @@ const createHostList = ({
 onmessage = function (e) {
 	// console.log(e);
 	const result = createHostList(e.data);
+	console.log(result);
 	postMessage(result);
 };

@@ -3,7 +3,7 @@
 
 	let list: Host[] = [];
 
-	// < !-- 워커 생성 -->
+	// << !-- 워커 생성 -->
 	const worker = new Worker(new URL('./worker2.ts', import.meta.url));
 
 	// << !-- 워커 실행 요청-->
@@ -11,21 +11,15 @@
 
 	// << !-- 워커 실행 결과 수신 -->
 	worker.onmessage = (e) => {
-		// 이렇게 스벨트ui에 반영을 하네?
 		list = e.data;
 	};
 	console.log('list.length', list.length);
-	// < !-- random Interval -->
-	// 뭔진 모르겠는데, 혹은 대충은 알겠는데. 머..복잡하게 해서 먼가 나오네.
+	console.log(list);
+
+	// << !-- random Interval -->
 	const randomSeconds = (min: number, max: number) => {
 		return Math.floor(Math.random() * (max - min + 1)) + min;
 	};
-
-	// 이놈의 역할은?
-	// 어떻게 매번 다른시간으로 계속 돌지??
-	// 구조 해석이 가능한가 나는?
-	// 이 안에서 뭐하는데 ?
-	//전체적인 코드의 의미가 그래서 뭔데?
 
 	const randomSetTimeOut = () => {
 		setTimeout(() => {
@@ -34,8 +28,6 @@
 		}, randomSeconds(1000, 5000));
 	};
 
-	// list = createHostList({ hostLength: 100, isOnAllTrue: true });
-	// console.log(list);
 	randomSetTimeOut();
 </script>
 
