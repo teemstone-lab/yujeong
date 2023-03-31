@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			const getBigNumberArray = `${parseInt(Math.random() * 100)}000`;
+
+			const array = new Array(Number(getBigNumberArray)).fill(0).map((_, index) => index);
+			// console.log(array);
+
+			const memo = () => {
+				const memoArray = [];
+				return (a) => {
+					console.log(a);
+					const memoItem = memoArray.find((item) => item.args === a);
+					if (memoItem) {
+						console.log(memoItem.result);
+						return memoItem.result;
+					}
+					if (!memoItem) {
+						memoArray.push({ args: a, result: getBigNumberArray });
+						console.log('memoArray0', memoArray);
+					}
+				};
+			};
+
+			const memoizetion = memo();
+			memoizetion(444);
+			memoizetion(444);
+			memoizetion(444);
+			memoizetion(233);
+			memoizetion(223);
+			memoizetion(223);
+			memoizetion(223);
+			memoizetion(223);
+			memoizetion(223);
+
+			console.log(
+				'reduce',
+				[1, 2, 3, 4, 5, 6].reduce((acc, c) => acc * c, 1000),
+			);
+
+			// 매번 정해진 규칙이나 그룹에 따라서 무거운 연산을 해야한다면.
+			// 1-200까지에 정해진 수에 따라, 결과가 같은 무거운 연산이 있다면.
+
+			// 그 인자에 따라서, 값이 동일성을 가진다면.
+			// ㅇㅇ..? 어...일단 내가 계산했던건지 확인점 ㅋ
+			// ㅇㅇ..? 어! 있다. 개꿀 바로 줄 수 있음. ㅋ
+			// ㅇㅇ..? 어..없네 .. 우울하게 계산 무겁게 해서 줌
+		</script>
+	</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.sb-show-main.sb-main-padded {
+				padding: 0;
+			}
+			* {
+				font-family: 'Roboto', sans-serif !important;
+			}
+			html,
+			body,
+			#app {
+				width: 100%;
+				height: 100%;
+				background: #fff;
+				transition: 0.5s;
+			}
+
+			html.dark #app {
+				background: #333;
+			}
+			html.dark {
+				background: #333;
+			}
+
+			html.dark body {
+				width: 100%;
+				height: 100%;
+				background: #333;
+				transition: 0.5s;
+			}
+
+			body,
+			.calTop,
+			.calBottom {
+				display: flex;
+			}
+
+			body {
+				flex-direction: column;
+				width: 400px;
+				height: 500px;
+			}
+
+			form {
+				display: flex;
+				width: 100%;
+				height: 150px;
+				flex-wrap: wrap;
+				align-items: flex-end;
+				padding-bottom: 10px;
+				border: 1px solid red;
+			}
+
+			input {
+				font-size: 30px;
+				text-align: right;
+				overflow: hidden;
+			}
+
+			input:focus {
+				outline: none;
+			}
+			.result {
+				display: flex;
+				flex-wrap: wrap;
+				width: 400px;
+			}
+
+			.calcPad1 {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.calcSign {
+				display: flex;
+			}
+
+			.calcSign ul {
+				display: flex;
+			}
+
+			calcSign ul li {
+				display: flex;
+			}
+
+			.funcKeytop,
+			.numbKey,
+			.funcKeyRight {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				font-size: 35px;
+				line-height: 0;
+			}
+
+			.funcKeytop button {
+				background-color: #a5a5a5;
+			}
+
+			.funcKeytop button:active {
+				background-color: white;
+			}
+			.calcSign button :hover::before {
+				background-color: #a5a5a5;
+			}
+
+			.padRow1 {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.padRow2 {
+				display: flex;
+				flex-direction: row;
+				width: 300px;
+			}
+
+			.padRow2 .numbKey {
+				display: flex;
+				align-items: center;
+				/* padding-left: 15%; */
+				width: 200px;
+				/* border-radius: 50px; */
+			}
+
+			.padRow2 .numbKey .num0 {
+				display: flex;
+				align-items: center;
+				margin: 2%;
+				padding-left: 15%;
+				width: 200px;
+				border-radius: 50px;
+			}
+			.padRow2 .decimalPoint {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 90px;
+			}
+
+			.numbKey button {
+				background-color: #333333;
+				color: white;
+				position: relative;
+			}
+			.numbKey button:active::after {
+				/* background-color: rgba(255, 255, 255, 0.8); */
+				/* background: red; */
+				/* position: absolute; */
+				/* border-radius: 50%; */
+				/* top: 0; */
+				/* left: 0; */
+				/* width: 100%; */
+				/* height: 100%; */
+				/* content: ''; */
+			}
+
+			.numbKey button:active {
+				background-color: #545454;
+			}
+
+			.funcKeyRight button {
+				background-color: #fe9f0c;
+				color: white;
+			}
+
+			.funcKeyRight button:active {
+				background-color: white;
+				color: #fe9f0c;
+			}
+			ul li {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			ul li button {
+				width: 90px;
+				height: 90px;
+				border-radius: 50%;
+				border: 1px solid black;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<body>
+				<!-- result -->
+				<div class="calTop">
+					<form>
+						<input class="result" type="text" />
+					</form>
+				</div>
+
+				<!-- keyPad -->
+				<div class="calBottom">
+					<div class="calcPad1">
+						<div class="calcSign">
+							<ul>
+								<li class="funcKeytop"><button class="allClear">AC</button></li>
+								<li class="funcKeytop"><button class="plusMinus">±</button></li>
+								<li class="funcKeytop"><button class="percentage">%</button></li>
+							</ul>
+						</div>
+						<div class="keyPad">
+							<ul>
+								<div class="padRow1">
+									<li class="numbKey"><button class="num7">7</button></li>
+									<li class="numbKey"><button class="num8">8</button></li>
+									<li class="numbKey"><button class="num9">9</button></li>
+									<li class="numbKey"><button class="num4">4</button></li>
+									<li class="numbKey"><button class="num5">5</button></li>
+									<li class="numbKey"><button class="num6">6</button></li>
+									<li class="numbKey"><button class="num1">1</button></li>
+									<li class="numbKey"><button class="num2">2</button></li>
+									<li class="numbKey"><button class="num3">3</button></li>
+								</div>
+								<div class="padRow2">
+									<li class="numbKey"><button class="num0">0</button></li>
+									<li class="numbKey"><button class="decimalPoint">.</button></li>
+								</div>
+							</ul>
+						</div>
+					</div>
+					<div class="calcPad2">
+						<div class="elementary4">
+							<ul>
+								<li class="funcKeyRight"><button class="divi">÷</button></li>
+								<li class="funcKeyRight"><button class="multi">×</button></li>
+								<li class="funcKeyRight"><button class="minus">－</button></li>
+								<li class="funcKeyRight"><button class="plus">＋</button></li>
+								<li class="funcKeyRight"><button class="equal">＝</button></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</body>
+		</main>
+		<script>
+			class Calculator {
+				constructor() {
+					this.firstValue = null;
+					this.secondValue = null;
+					this.selectedOprator = null;
+					this.currentValue = 0;
+				}
+
+				plus(n1, n2) {
+					return n1 + n2;
+				}
+
+				minus(n1, n2) {
+					return n1 - n2;
+				}
+
+				multi(n1, n2) {
+					return n1 * n2;
+				}
+
+				divi(n1, n2) {
+					return n1 / n2;
+				}
+
+				clear() {
+					this.currentValue = 0;
+				}
+
+				plusminus() {
+					this.currentValue = this.currentValue * -1;
+				}
+
+				percentage() {
+					this.currentValue = this.currentValue * 0.01;
+				}
+
+				inputNumber(number) {
+					// if (selectedOprator == null) {
+
+					if (!this.selectedOeprator) {
+						const nextFirstValue =
+							this.firstValue === null ? '' : String(this.firstValue);
+						this.firstValue = nextFirstValue + String(number);
+					} else {
+						const nextSecondValue =
+							this.secondValue === null ? '' : String(this.secondValue);
+						this.secondValue = nextSecondValue + String(number);
+					}
+				}
+
+				selectOeprator(operator) {
+					this.selectedOeprator = operator;
+				}
+
+				makeResult() {
+					if (this.selectedOeprator === '+') {
+						return this.plus(Number(this.firstValue), Number(this.secondValue));
+					}
+
+					if (this.selectedOeprator === '-') {
+						return this.minus(Number(this.firstValue), Number(this.secondValue));
+					}
+
+					if (this.selectedOeprator === '*') {
+						return this.multi(Number(this.firstValue), Number(this.secondValue));
+					}
+
+					if (this.selectedOeprator === '/') {
+						return this.divi(Number(this.firstValue), Number(this.secondValue));
+					}
+				}
+			}
+
+			const calculator = new Calculator();
+			// 작동 점검
+			// calculator.inputNumber(1);
+			// calculator.inputNumber(1);
+			// calculator.inputNumber(1);
+			// calculator.selectOeprator('/');
+			// calculator.inputNumber(1);
+			// calculator.inputNumber(1);
+			// console.log(calculator);
+			// console.log(calculator.makeResult());
+
+			const ac = document.querySelector('.allClear');
+			ac.style.color = 'red';
+			contole.log(ac);
+		</script>
+	</body>
+</html>

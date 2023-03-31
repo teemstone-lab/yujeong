@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			class 자판기커피기계 {
+				constructor(재료) {
+					this.설탕 = 재료.설탕;
+					this.원두 = 재료.원두;
+					this.프림 = 재료.프림;
+					this.밀크 = 재료.밀크;
+					this.돈 = 0;
+				}
+				//
+				충전하기({}) {
+					this.설탕충전();
+					this.원두충전();
+					this.프림충전();
+					this.밀크충전();
+					this.돈충전();
+				}
+
+				설탕충전(설탕) {
+					this.설탕 = this.설탕 + 설탕;
+				}
+
+				원두충전(원두) {
+					this.원두 = this.원두 + 원두;
+				}
+
+				프림충전(프림) {
+					this.프림 = this.프림 + 프림;
+				}
+
+				밀크충전(밀크) {
+					this.밀크 = this.밀크 + 밀크;
+				}
+
+				돈충전(돈) {
+					this.돈 = this.돈 + 돈;
+				}
+				//
+
+				물넣기() {
+					console.log('물 들어가요');
+				}
+
+				설탕넣기() {
+					this.설탕 = this.설탕 - 10;
+				}
+
+				원두넣기() {
+					this.원두 = this.원두 - 10;
+				}
+
+				프림넣기() {
+					this.프림 = this.프림 - 10;
+				}
+
+				밀크넣기() {
+					this.밀크 = this.밀크 - 10;
+				}
+				//
+				만들기({}) {
+					this.밀크커피만들기();
+					this.원두커피만들기();
+					this.믹스커피만들기();
+				}
+
+				밀크커피만들기() {
+					this.물넣기();
+					this.설탕넣기();
+					this.원두넣기();
+					this.밀크넣기();
+					console.log('밀크커피완성!');
+					return { 이름: '밀크커피' };
+				}
+
+				블랙커피만들기() {
+					this.물넣기();
+					this.원두넣기();
+					console.log('블랙커피완성!');
+				}
+
+				믹스커피만들기() {
+					this.물넣기();
+					this.설탕넣기();
+					this.원두넣기();
+					this.프림넣기();
+					console.log('믹스커피완성!');
+				}
+
+				밀크커피판매하기() {
+					if (this.돈 - 500 > 0) {
+						this.돈 = this.돈 - 500;
+						return this.밀크커피만들기();
+					} else {
+						throw new Error('돈이 부족합니다');
+					}
+				}
+			}
+			//
+
+			const 나의자판기커피기계 = new 자판기커피기계({
+				설탕: 100,
+				원두: 100,
+				프림: 100,
+				밀크: 100,
+			});
+			console.log(나의자판기커피기계);
+			나의자판기커피기계.돈충전(10000);
+			const 커피1 = 나의자판기커피기계.밀크커피판매하기();
+			console.log(커피1);
+			console.log(나의자판기커피기계);
+		</script>
+	</body>
+</html>
