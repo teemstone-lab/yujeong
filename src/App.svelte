@@ -32,7 +32,7 @@
 	import Markup7 from './pages/html/html7.svelte';
 	import Markup8 from './pages/html/html8.svelte';
 	import Markup9 from './pages/html/html9.svelte';
-	import Markup10 from './pages/html/App.svelte';
+	import Markup10 from './pages/html/html10.svelte';
 
 	// import Nav from './components/nav/Nav.svelte';
 
