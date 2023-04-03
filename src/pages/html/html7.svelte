@@ -266,9 +266,11 @@
 
 	.chartTab {
 		display: flex;
+		overflow-y: scroll;
 		background-color: #323232;
 		width: 100%;
 		border: 2px solid gray;
+		/* height: calc(100vh - 166px); */
 		min-height: calc(100vh - 120px);
 	}
 

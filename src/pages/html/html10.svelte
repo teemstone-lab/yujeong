@@ -156,22 +156,23 @@
 				<!--  list binding -->
 				<div class="hostTree">
 					<ul>
-						{console.log('list.length', list.length)}
+						<!-- {console.log('list.length', list.length)} -->
 						{#each list as item}
-							<li
-								><div
-									class="{`h-4 w-4 rounded-full transition-all duration-700 ${
+							<li class=" item-center flex gap-2">
+								<div class="item-center flex">{item.hostName}</div>
+								<div
+									class="{`flex h-4 w-4 rounded-full transition-all duration-700 ${
 										item.isOn ? 'bg-blue-700' : 'bg-slate-100'
 									}`}"
 								>
-								</div>{item.isOn}</li
+								</div>{item.isOn ? 'on' : 'off'}</li
 							>
 						{/each}
 					</ul>
 				</div>
 			</div>
 			<!--  chart binding -->
-			<div class="chartTab">
+			<div class="chartTab h-693px overflow-auto">
 				<ul class="flex w-full flex-col gap-4">
 					{#each list as item}
 						<li
