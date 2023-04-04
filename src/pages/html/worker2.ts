@@ -8,27 +8,71 @@ const createHostList = ({
 }: {
 	hostLength: number;
 	isOnAllTrue: boolean;
-}) => {
-	const result = [];
+}) =>
+	//<<!-- 수정코드-->
+	{
+		const result = Array.from({ length: hostLength }).map((item, index) => {
+			const randomBoolean = Math.random() < 0.5 ? true : false;
+			const resultItem: Host = {
+				hostId: index + 1,
+				hostName: `host${index + 1}`,
+				cpu: parseInt(`${Math.random() * 100}`),
+				isOn: isOnAllTrue ? true : randomBoolean,
+			};
+			return resultItem;
+		});
 
-	for (let index = 0; index < hostLength; index++) {
-		const randomBoolean = Math.random() < 0.5 ? true : false;
-		const resultItem: Host = {
-			hostId: index + 1,
-			hostName: `host${index + 1}`,
-			cpu: parseInt(`${Math.random() * 100}`),
-			isOn: isOnAllTrue ? true : randomBoolean,
-		};
+		return result;
+	};
 
-		result.push(resultItem);
-	}
+//<<!-- 기존 코드 -->
+// {
+// 	const result = [];
 
-	return result;
-};
+// 	for (let index = 0; index < hostLength; index++) {
+// 		const randomBoolean = Math.random() < 0.5 ? true : false;
+// 		const resultItem: Host = {
+// 			hostId: index + 1,
+// 			hostName: `host${index + 1}`,
+// 			cpu: parseInt(`${Math.random() * 100}`),
+// 			isOn: isOnAllTrue ? true : randomBoolean,
+// 		};
 
+// 		result.push(resultItem);
+// 	}
+
+// 	return result;
+// };
+
+// onmessage = function (e) {
+// 	// console.log(e);
+// 	const result = createHostList(e.data);
+// 	console.log(result);
+// 	postMessage(result);
+// };
+let isResolve = false;
 onmessage = function (e) {
-	// console.log(e);
-	const result = createHostList(e.data);
-	console.log(result);
-	postMessage(result);
+	// const result = createHostList(e.data);
+	const randomSeconds = (min: number, max: number) => {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	};
+
+	const randomSetTimeOut = () => {
+		setTimeout(() => {
+			let result;
+			if (e.data.isOnAllTrue && !isResolve) {
+				result = createHostList(e.data);
+				isResolve = true;
+			} else {
+				result = createHostList({ ...e.data, isOnAllTrue: false });
+			}
+
+			console.log(result);
+			postMessage(result);
+			randomSetTimeOut();
+			// randomSetTimeOut(); >> postmessage 로 받아버려서 자동으로 주고받고 되니까 필요 없는 거였음!
+		}, randomSeconds(1000, 5000));
+	};
+
+	randomSetTimeOut();
 };

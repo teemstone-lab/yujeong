@@ -1,7 +1,7 @@
 <script lang="ts">
-	type Host = { hostName: string; cpu: number; isOn: boolean };
+	type Host = { hostName: string; cpu: number; isOn: boolean; hostId: number };
 
-	let list: Host[] = [];
+	let hostList: Host[] = [];
 
 	// << !-- 워커 생성 -->
 	const worker = new Worker(new URL('./worker2.ts', import.meta.url));
@@ -11,24 +11,26 @@
 
 	// << !-- 워커 실행 결과 수신 -->
 	worker.onmessage = (e) => {
-		list = e.data;
+		hostList = e.data;
+		console.log('aasa', e);
 	};
-	console.log('list.length', list.length);
-	console.log(list);
+
+	console.log('hostList.length', hostList.length);
+	console.log('이거다', hostList);
 
 	// << !-- random Interval -->
-	const randomSeconds = (min: number, max: number) => {
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	};
+	// const randomSeconds = (min: number, max: number) => {
+	// 	return Math.floor(Math.random() * (max - min + 1)) + min;
+	// };
 
-	const randomSetTimeOut = () => {
-		setTimeout(() => {
-			worker.postMessage({ hostLength: 100, isOnAllTrue: false });
-			randomSetTimeOut();
-		}, randomSeconds(1000, 5000));
-	};
+	// const randomSetTimeOut = () => {
+	// 	setTimeout(() => {
+	// 		worker.postMessage({ hostLength: 100, isOnAllTrue: false });
+	// 		randomSetTimeOut();
+	// 	}, randomSeconds(1000, 5000));
+	// };
 
-	randomSetTimeOut();
+	// randomSetTimeOut();
 </script>
 
 <main>
@@ -153,11 +155,11 @@
 						</li>
 					</ul>
 				</div>
-				<!--  list binding -->
+				<!--  hostList binding -->
 				<div class="hostTree">
 					<ul>
-						<!-- {console.log('list.length', list.length)} -->
-						{#each list as item}
+						<!-- {console.log('hostList.length', hostList.length)} -->
+						{#each hostList as item (item.hostId)}
 							<li class=" flex items-center gap-2">
 								<div class="flex items-center">{item.hostName}</div>
 								<div
@@ -174,8 +176,8 @@
 			<!--  chart binding -->
 			<div class="chartTab h-[693px] overflow-auto">
 				<ul class="flex w-full flex-col gap-4">
-					{#each list as item, index}
-						{console.log(index)}
+					{#each hostList as item (item.hostId)}
+						<!-- {console.log(index)} -->
 						<li
 							class=" border-light-200 flex w-full  gap-5 border-[1px] border-solid text-white"
 						>
