@@ -174,7 +174,8 @@
 			<!--  chart binding -->
 			<div class="chartTab h-[693px] overflow-auto">
 				<ul class="flex w-full flex-col gap-4">
-					{#each list as item}
+					{#each list as item, index}
+						{console.log(index)}
 						<li
 							class=" border-light-200 flex w-full  gap-5 border-[1px] border-solid text-white"
 						>

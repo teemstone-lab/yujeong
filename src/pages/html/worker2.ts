@@ -1,6 +1,6 @@
 // postMessage("I'm working before postMessage('ali').");
 
-type Host = { hostName: string; cpu: number; isOn: boolean };
+type Host = { hostId: number; hostName: string; cpu: number; isOn: boolean };
 
 const createHostList = ({
 	hostLength,
@@ -14,6 +14,7 @@ const createHostList = ({
 	for (let index = 0; index < hostLength; index++) {
 		const randomBoolean = Math.random() < 0.5 ? true : false;
 		const resultItem: Host = {
+			hostId: index + 1,
 			hostName: `host${index + 1}`,
 			cpu: parseInt(`${Math.random() * 100}`),
 			isOn: isOnAllTrue ? true : randomBoolean,
