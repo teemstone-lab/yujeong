@@ -12,7 +12,6 @@
 	// << !-- 워커 실행 결과 수신 -->
 	worker.onmessage = (e) => {
 		hostList = e.data;
-		console.log('aasa', e);
 	};
 
 	console.log('hostList.length', hostList.length);

@@ -8,22 +8,35 @@ const createHostList = ({
 }: {
 	hostLength: number;
 	isOnAllTrue: boolean;
-}) =>
-	//<<!-- 수정코드-->
-	{
-		const result = Array.from({ length: hostLength }).map((item, index) => {
-			const randomBoolean = Math.random() < 0.5 ? true : false;
-			const resultItem: Host = {
-				hostId: index + 1,
-				hostName: `host${index + 1}`,
-				cpu: parseInt(`${Math.random() * 100}`),
-				isOn: isOnAllTrue ? true : randomBoolean,
-			};
-			return resultItem;
-		});
+}) => {
+	const hostArray = Array(hostLength).fill(undefined);
+	for (let index = 0; index < hostArray.length; index++) {
+		const randomBoolean = Math.random() < 0.5 ? true : false;
+		hostArray[index] = {
+			hostId: index + 1,
+			hostName: `host${index + 1}`,
+			cpu: parseInt(`${Math.random() * 100}`),
+			isOn: isOnAllTrue ? true : randomBoolean,
+		};
+	}
+	return hostArray;
+};
 
-		return result;
-	};
+//<<!-- 수정코드-->
+// {
+// 	const result = Array.from({ length: hostLength }).map((item, index) => {
+// 		const randomBoolean = Math.random() < 0.5 ? true : false;
+// 		const resultItem: Host = {
+// 			hostId: index + 1,
+// 			hostName: `host${index + 1}`,
+// 			cpu: parseInt(`${Math.random() * 100}`),
+// 			isOn: isOnAllTrue ? true : randomBoolean,
+// 		};
+// 		return resultItem;
+// 	});
+
+// 	return result;
+// };
 
 //<<!-- 기존 코드 -->
 // {
@@ -70,7 +83,6 @@ onmessage = function (e) {
 			console.log(result);
 			postMessage(result);
 			randomSetTimeOut();
-			// randomSetTimeOut(); >> postmessage 로 받아버려서 자동으로 주고받고 되니까 필요 없는 거였음!
 		}, randomSeconds(1000, 5000));
 	};
 
