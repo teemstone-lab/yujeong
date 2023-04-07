@@ -1,54 +1,47 @@
 <script>
-	let text = '';
-	let number = 3;
-	let checked = false;
-	let fruits = ['apple', 'banana', 'cherry'];
-	let selectedFruits = [];
-	let group = 'banana';
-	let textarea = '';
-	let select = 'banana';
-	let multripleselect = ['banana', 'cherry'];
+	let count = 0;
 </script>
 
-<!-- let text = '' -->
+<button
+	on:click="{() => {
+		count += 1;
+	}}"
+>
+	증가!
+</button>
+<button
+	on:click="{() => {
+		count -= 1;
+	}}"
+>
+	감소!
+</button>
+
+<h2>{count}</h2>
+
 <section>
-	<h2>Text</h2>
-	<input type="text" bind:value="{text}" />
+	<h2>if</h2>
+	{#if count > 3}
+		<div>count &gt; 3</div>
+	{/if}
 </section>
 
-<!-- let number = 3 -->
 <section>
-	<h2>Number/Range</h2>
-	<div>
-		<input type="number" bind:value="{number}" min="0" max="10" />
-	</div>
-	<div>
-		<input type="range" bind:value="{number}" min="0" max="10" />
-	</div>
+	<h2>if else</h2>
+	{#if count > 3}
+		<div>count &gt; 3</div>
+	{:else}
+		<div>count &lt ;= 3</div>
+	{/if}
 </section>
 
-<!-- let checked = false -->
 <section>
-	<section>
-		<h2>Checkbox</h2>
-		<div>
-			<input type="checkbox" bind:checked="{checked}" /> Agree?
-		</div>
-		<div>
-			<input type="checkbox" bind:checked="{checked}" /> Agree?(label wrapping)
-		</div>
-	</section>
-</section>
-
-<!-- let fruits = ['apple', 'banana', 'cherry']
-let selectedFruits = [] -->
-<section>
-	<h2>Checkbox 다중 선택</h2>
-	<strong>Selected: {selectedFruits}</strong>
-	{#each fruits as fruit}
-		<label>
-			<input type="checkbox" value="{fruit}" bind:group="{selectedFruits}" />
-			{fruit}
-		</label>
-	{/each}
+	<h2>if else</h2>
+	{#if count > 3}
+		<div>count &gt; 3</div>
+	{:else if count === 3}
+		<div>count === 3</div>
+	{:else}
+		<div>count &1;3</div>
+	{/if}
 </section>

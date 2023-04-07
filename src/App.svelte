@@ -33,6 +33,7 @@
 	import Markup8 from './pages/html/html8.svelte';
 	import Markup9 from './pages/html/html9.svelte';
 	import Markup10 from './pages/html/html10.svelte';
+	import Markup11 from './pages/html/html11.svelte';
 
 	// import Nav from './components/nav/Nav.svelte';
 
@@ -106,6 +107,12 @@
 			<div class="{`${currentPage === 'markup/markup10' ? 'on' : ''}`}"> markup/markup10</div>
 		</button></li
 	>
+
+	<li
+		><button on:click="{clickHandler}">
+			<div class="{`${currentPage === 'markup/markup11' ? 'on' : ''}`}"> markup/markup11</div>
+		</button></li
+	>
 </ul>
 
 <main>
@@ -142,5 +149,9 @@
 
 	{#if currentPage === 'markup/markup10'}
 		<div class="wrapper"><Markup10 /></div>
+	{/if}
+
+	{#if currentPage === 'markup/markup11'}
+		<div class="wrapper"><Markup11 /></div>
 	{/if}
 </main>
