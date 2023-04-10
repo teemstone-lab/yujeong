@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Mon Apr 10 2023 08:59:26 GMT+0900 (대한민국 표준시)
+ * File generated Mon Apr 10 2023 14:18:44 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-04-09T23:59:26.316Z"
+export const __timestamp = "2023-04-10T05:18:44.580Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -132,6 +132,155 @@ export const _tree = {
           "path": "/html/App",
           "id": "_html_App",
           "component": () => import('../src/pages/html/App.svelte').then(m => m.default)
+        },
+        {
+          "isFile": false,
+          "isDir": true,
+          "file": "components",
+          "filepath": "/html/components",
+          "name": "components",
+          "ext": "",
+          "badExt": false,
+          "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/components",
+          "children": [
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "Body.svelte",
+              "filepath": "/html/components/Body.svelte",
+              "name": "Body",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/components/Body.svelte",
+              "importPath": "../src/pages/html/components/Body.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/components/Body",
+              "id": "_html_components_Body",
+              "component": () => import('../src/pages/html/components/Body.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "ChartTab.svelte",
+              "filepath": "/html/components/ChartTab.svelte",
+              "name": "ChartTab",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/components/ChartTab.svelte",
+              "importPath": "../src/pages/html/components/ChartTab.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/components/ChartTab",
+              "id": "_html_components_ChartTab",
+              "component": () => import('../src/pages/html/components/ChartTab.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "Footer.svelte",
+              "filepath": "/html/components/Footer.svelte",
+              "name": "Footer",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/components/Footer.svelte",
+              "importPath": "../src/pages/html/components/Footer.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/components/Footer",
+              "id": "_html_components_Footer",
+              "component": () => import('../src/pages/html/components/Footer.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "Header.svelte",
+              "filepath": "/html/components/Header.svelte",
+              "name": "Header",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/components/Header.svelte",
+              "importPath": "../src/pages/html/components/Header.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/components/Header",
+              "id": "_html_components_Header",
+              "component": () => import('../src/pages/html/components/Header.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "HostTree.svelte",
+              "filepath": "/html/components/HostTree.svelte",
+              "name": "HostTree",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/components/HostTree.svelte",
+              "importPath": "../src/pages/html/components/HostTree.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/components/HostTree",
+              "id": "_html_components_HostTree",
+              "component": () => import('../src/pages/html/components/HostTree.svelte').then(m => m.default)
+            }
+          ],
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": false,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/html/components"
         },
         {
           "isFile": true,
@@ -536,31 +685,6 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
-          "file": "html10.svelte",
-          "filepath": "/html/html10.svelte",
-          "name": "html10",
-          "ext": "svelte",
-          "badExt": false,
-          "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/html10.svelte",
-          "importPath": "../src/pages/html/html10.svelte",
-          "isLayout": false,
-          "isReset": false,
-          "isIndex": false,
-          "isFallback": false,
-          "isPage": true,
-          "ownMeta": {},
-          "meta": {
-            "recursive": true,
-            "preload": false,
-            "prerender": true
-          },
-          "path": "/html/html10",
-          "id": "_html_html10",
-          "component": () => import('../src/pages/html/html10.svelte').then(m => m.default)
-        },
-        {
-          "isFile": true,
-          "isDir": false,
           "file": "html11.svelte",
           "filepath": "/html/html11.svelte",
           "name": "html11",
@@ -607,6 +731,31 @@ export const _tree = {
           "path": "/html/Something",
           "id": "_html_Something",
           "component": () => import('../src/pages/html/Something.svelte').then(m => m.default)
+        },
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "wknd9_main.svelte",
+          "filepath": "/html/wknd9_main.svelte",
+          "name": "wknd9_main",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/wknd9_main.svelte",
+          "importPath": "../src/pages/html/wknd9_main.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/html/wknd9_main",
+          "id": "_html_wknd9_main",
+          "component": () => import('../src/pages/html/wknd9_main.svelte').then(m => m.default)
         }
       ],
       "isLayout": false,
