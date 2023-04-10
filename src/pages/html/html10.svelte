@@ -14,8 +14,7 @@
 		hostList = e.data;
 	};
 
-	console.log('hostList.length', hostList.length);
-	console.log('이거다', hostList);
+	console.log('최초빈배열', hostList);
 
 	// << !-- random Interval -->
 	// const randomSeconds = (min: number, max: number) => {

@@ -63,7 +63,7 @@ const createHostList = ({
 // 	console.log(result);
 // 	postMessage(result);
 // };
-let isResolve = false;
+let isOnInit = false;
 onmessage = function (e) {
 	// const result = createHostList(e.data);
 	const randomSeconds = (min: number, max: number) => {
@@ -73,9 +73,9 @@ onmessage = function (e) {
 	const randomSetTimeOut = () => {
 		setTimeout(() => {
 			let result;
-			if (e.data.isOnAllTrue && !isResolve) {
+			if (e.data.isOnAllTrue && !isOnInit) {
 				result = createHostList(e.data);
-				isResolve = true;
+				isOnInit = true;
 			} else {
 				result = createHostList({ ...e.data, isOnAllTrue: false });
 			}
