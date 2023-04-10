@@ -22,6 +22,32 @@ const createHostList = ({
 	return hostArray;
 };
 
+let isOnInit = false;
+onmessage = function (e) {
+	// const result = createHostList(e.data);
+	const randomSeconds = (min: number, max: number) => {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	};
+
+	const randomSetTimeOut = () => {
+		setTimeout(() => {
+			let result;
+			if (e.data.isOnAllTrue && !isOnInit) {
+				result = createHostList(e.data);
+				isOnInit = true;
+			} else {
+				result = createHostList({ ...e.data, isOnAllTrue: false });
+			}
+
+			console.log(result);
+			postMessage(result);
+			randomSetTimeOut();
+		}, randomSeconds(1000, 5000));
+	};
+
+	randomSetTimeOut();
+};
+
 //<<!-- 수정코드-->
 // {
 // 	const result = Array.from({ length: hostLength }).map((item, index) => {
@@ -63,28 +89,3 @@ const createHostList = ({
 // 	console.log(result);
 // 	postMessage(result);
 // };
-let isOnInit = false;
-onmessage = function (e) {
-	// const result = createHostList(e.data);
-	const randomSeconds = (min: number, max: number) => {
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	};
-
-	const randomSetTimeOut = () => {
-		setTimeout(() => {
-			let result;
-			if (e.data.isOnAllTrue && !isOnInit) {
-				result = createHostList(e.data);
-				isOnInit = true;
-			} else {
-				result = createHostList({ ...e.data, isOnAllTrue: false });
-			}
-
-			console.log(result);
-			postMessage(result);
-			randomSetTimeOut();
-		}, randomSeconds(1000, 5000));
-	};
-
-	randomSetTimeOut();
-};
