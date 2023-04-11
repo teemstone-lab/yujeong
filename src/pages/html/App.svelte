@@ -13,6 +13,7 @@ let maxSequence = function(arr){
 	}, 0);
 	return Math.max(sum, max);
 }
+
 </script> -->
 <script>
 	const arr = [-1, -2, 3, 0, -1, 0, 4, -2];
@@ -34,7 +35,7 @@ let maxSequence = function(arr){
 	);
 
 	console.log(
-		`총합의 구간은 [${arr.slice(maxSum.start, maxSum.end + 1)}] 이며, 합은 ${
+		`최대 부분합의 구간은 [${arr.slice(maxSum.start, maxSum.end + 1)}] 이며, 최대 부분합은 ${
 			maxSum.sum
 		} 입니다.`,
 	);
