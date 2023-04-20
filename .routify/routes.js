@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Mon Apr 10 2023 16:05:02 GMT+0900 (대한민국 표준시)
+ * File generated Tue Apr 18 2023 13:10:02 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-04-10T07:05:02.337Z"
+export const __timestamp = "2023-04-18T04:10:02.324Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -33,33 +33,7 @@ export const _tree = {
       "ext": "",
       "badExt": false,
       "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/async",
-      "children": [
-        {
-          "isFile": true,
-          "isDir": false,
-          "file": "testest.html",
-          "filepath": "/async/testest.html",
-          "name": "testest",
-          "ext": "html",
-          "badExt": false,
-          "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/async/testest.html",
-          "importPath": "../src/pages/async/testest.html",
-          "isLayout": false,
-          "isReset": false,
-          "isIndex": false,
-          "isFallback": false,
-          "isPage": true,
-          "ownMeta": {},
-          "meta": {
-            "recursive": true,
-            "preload": false,
-            "prerender": true
-          },
-          "path": "/async/testest",
-          "id": "_async_testest",
-          "component": () => import('../src/pages/async/testest.html').then(m => m.default)
-        }
-      ],
+      "children": [],
       "isLayout": false,
       "isReset": false,
       "isIndex": false,
@@ -83,31 +57,6 @@ export const _tree = {
       "badExt": false,
       "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html",
       "children": [
-        {
-          "isFile": true,
-          "isDir": false,
-          "file": "a.html",
-          "filepath": "/html/a.html",
-          "name": "a",
-          "ext": "html",
-          "badExt": false,
-          "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/a.html",
-          "importPath": "../src/pages/html/a.html",
-          "isLayout": false,
-          "isReset": false,
-          "isIndex": false,
-          "isFallback": false,
-          "isPage": true,
-          "ownMeta": {},
-          "meta": {
-            "recursive": true,
-            "preload": false,
-            "prerender": true
-          },
-          "path": "/html/a",
-          "id": "_html_a",
-          "component": () => import('../src/pages/html/a.html').then(m => m.default)
-        },
         {
           "isFile": true,
           "isDir": false,
@@ -267,6 +216,81 @@ export const _tree = {
               "path": "/html/components/HostTree",
               "id": "_html_components_HostTree",
               "component": () => import('../src/pages/html/components/HostTree.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "TodoHeader.svelte",
+              "filepath": "/html/components/TodoHeader.svelte",
+              "name": "TodoHeader",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/components/TodoHeader.svelte",
+              "importPath": "../src/pages/html/components/TodoHeader.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/components/TodoHeader",
+              "id": "_html_components_TodoHeader",
+              "component": () => import('../src/pages/html/components/TodoHeader.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "TodoItem.svelte",
+              "filepath": "/html/components/TodoItem.svelte",
+              "name": "TodoItem",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/components/TodoItem.svelte",
+              "importPath": "../src/pages/html/components/TodoItem.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/components/TodoItem",
+              "id": "_html_components_TodoItem",
+              "component": () => import('../src/pages/html/components/TodoItem.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "TodoList.svelte",
+              "filepath": "/html/components/TodoList.svelte",
+              "name": "TodoList",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/components/TodoList.svelte",
+              "importPath": "../src/pages/html/components/TodoList.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/components/TodoList",
+              "id": "_html_components_TodoList",
+              "component": () => import('../src/pages/html/components/TodoList.svelte').then(m => m.default)
             }
           ],
           "isLayout": false,
@@ -685,56 +709,6 @@ export const _tree = {
         {
           "isFile": true,
           "isDir": false,
-          "file": "html11.svelte",
-          "filepath": "/html/html11.svelte",
-          "name": "html11",
-          "ext": "svelte",
-          "badExt": false,
-          "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/html11.svelte",
-          "importPath": "../src/pages/html/html11.svelte",
-          "isLayout": false,
-          "isReset": false,
-          "isIndex": false,
-          "isFallback": false,
-          "isPage": true,
-          "ownMeta": {},
-          "meta": {
-            "recursive": true,
-            "preload": false,
-            "prerender": true
-          },
-          "path": "/html/html11",
-          "id": "_html_html11",
-          "component": () => import('../src/pages/html/html11.svelte').then(m => m.default)
-        },
-        {
-          "isFile": true,
-          "isDir": false,
-          "file": "Something.svelte",
-          "filepath": "/html/Something.svelte",
-          "name": "Something",
-          "ext": "svelte",
-          "badExt": false,
-          "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/Something.svelte",
-          "importPath": "../src/pages/html/Something.svelte",
-          "isLayout": false,
-          "isReset": false,
-          "isIndex": false,
-          "isFallback": false,
-          "isPage": true,
-          "ownMeta": {},
-          "meta": {
-            "recursive": true,
-            "preload": false,
-            "prerender": true
-          },
-          "path": "/html/Something",
-          "id": "_html_Something",
-          "component": () => import('../src/pages/html/Something.svelte').then(m => m.default)
-        },
-        {
-          "isFile": true,
-          "isDir": false,
           "file": "wknd9_main.svelte",
           "filepath": "/html/wknd9_main.svelte",
           "name": "wknd9_main",
@@ -756,6 +730,31 @@ export const _tree = {
           "path": "/html/wknd9_main",
           "id": "_html_wknd9_main",
           "component": () => import('../src/pages/html/wknd9_main.svelte').then(m => m.default)
+        },
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "wknd10_AppTodo.svelte",
+          "filepath": "/html/wknd10_AppTodo.svelte",
+          "name": "wknd10_AppTodo",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/html/wknd10_AppTodo.svelte",
+          "importPath": "../src/pages/html/wknd10_AppTodo.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/html/wknd10_AppTodo",
+          "id": "_html_wknd10_AppTodo",
+          "component": () => import('../src/pages/html/wknd10_AppTodo.svelte').then(m => m.default)
         }
       ],
       "isLayout": false,
@@ -830,6 +829,31 @@ export const _tree = {
           "path": "/test/:slug",
           "id": "_test__slug",
           "component": () => import('../src/pages/test/[slug].svelte').then(m => m.default)
+        },
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "array.svelte",
+          "filepath": "/test/array.svelte",
+          "name": "array",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "C:/Users/yjchoi/Desktop/project/yujeong/src/pages/test/array.svelte",
+          "importPath": "../src/pages/test/array.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/test/array",
+          "id": "_test_array",
+          "component": () => import('../src/pages/test/array.svelte').then(m => m.default)
         },
         {
           "isFile": true,

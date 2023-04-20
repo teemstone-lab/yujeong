@@ -1,12 +1,13 @@
 [
-  "/async/testest",
-  "/html/a",
   "/html/App",
   "/html/components/Body",
   "/html/components/ChartTab",
   "/html/components/Footer",
   "/html/components/Header",
   "/html/components/HostTree",
+  "/html/components/TodoHeader",
+  "/html/components/TodoItem",
+  "/html/components/TodoList",
   "/html/Fruits",
   "/html/html1",
   "/html/html1_flex",
@@ -23,9 +24,9 @@
   "/html/html8",
   "/html/html8 copy",
   "/html/html9",
-  "/html/html11",
-  "/html/Something",
   "/html/wknd9_main",
+  "/html/wknd10_AppTodo",
   "/index",
+  "/test/array",
   "/test/html9"
 ]
