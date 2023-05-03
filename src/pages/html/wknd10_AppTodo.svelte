@@ -43,6 +43,8 @@
 		$todos = $todos;
 		id += 1; // item이 생성될 때마다 id 값 1씩 증가
 	}
+
+	
 </script>
 
 <main>

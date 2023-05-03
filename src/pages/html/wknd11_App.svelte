@@ -1,6 +1,6 @@
 <script lang="ts">
-	import TodoItem2 from './components/TodoItem2.svelte';
-	import TodoList2 from './components/TodoList2.svelte';
+	import TodoInput from './components/wknd11_Todo/TodoInput11.svelte';
+	import TodoList2 from './components/wknd11_Todo/TodoList11.svelte';
 	import type { TodoItem, TodoList } from './types2';
 	import { v4 as uuid } from 'uuid';
 
@@ -26,6 +26,19 @@
 	const updateInputValue = (text: string) => {
 		inputValue = text;
 	};
+
+	const handleDelete = (id: string) => {
+		todoList = todoList.filter((deletedTodo) => deletedTodo.id !== id);
+	};
+
+	const handleEdit = (id: string, title: string) => {
+		const originalInput = todoList.find((modifiedTodo) => modifiedTodo.id === id);
+		if (originalInput) {
+			originalInput.title = title;
+		}
+		todoList = todoList;
+		console.log(todoList);
+	};
 </script>
 
 <input
@@ -37,8 +50,10 @@
 	}}"
 />
 
-<TodoItem2 btnClickHandler="{btnClickHandler}" />
+<TodoInput btnClickHandler="{btnClickHandler}" />
 
-{#each todoList as todoItem (todoItem.id)}
+<TodoList2 todoList="{todoList}" handleEdit="{handleEdit}" handleDelete="{handleDelete}" />
+
+<!-- {#each todoList as todoItem (todoItem.id)}
 	<div>{todoItem.title}</div>
-{/each}
+{/each} -->

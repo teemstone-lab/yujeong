@@ -26,7 +26,7 @@
 
 	import Markup10 from './pages/html/wknd9_main.svelte';
 	import Markup11 from './pages/html/wknd10_AppTodo.svelte';
-	import Markup12 from './pages/html/todoApp.svelte';
+	import Markup12 from './pages/html/wknd11_App.svelte';
 
 	// import Nav from './components/nav/Nav.svelte';
 

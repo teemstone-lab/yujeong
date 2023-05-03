@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Fri Apr 21 2023 17:37:43 GMT+0900 (대한민국 표준시)
+ * File generated Wed May 03 2023 10:11:25 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-04-21T08:37:43.809Z"
+export const __timestamp = "2023-05-03T01:11:25.197Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -245,31 +245,6 @@ export const _tree = {
             {
               "isFile": true,
               "isDir": false,
-              "file": "TodoItem2.svelte",
-              "filepath": "/html/components/TodoItem2.svelte",
-              "name": "TodoItem2",
-              "ext": "svelte",
-              "badExt": false,
-              "absolutePath": "E:/project/yujeong/src/pages/html/components/TodoItem2.svelte",
-              "importPath": "../src/pages/html/components/TodoItem2.svelte",
-              "isLayout": false,
-              "isReset": false,
-              "isIndex": false,
-              "isFallback": false,
-              "isPage": true,
-              "ownMeta": {},
-              "meta": {
-                "recursive": true,
-                "preload": false,
-                "prerender": true
-              },
-              "path": "/html/components/TodoItem2",
-              "id": "_html_components_TodoItem2",
-              "component": () => import('../src/pages/html/components/TodoItem2.svelte').then(m => m.default)
-            },
-            {
-              "isFile": true,
-              "isDir": false,
               "file": "TodoList.svelte",
               "filepath": "/html/components/TodoList.svelte",
               "name": "TodoList",
@@ -293,29 +268,128 @@ export const _tree = {
               "component": () => import('../src/pages/html/components/TodoList.svelte').then(m => m.default)
             },
             {
-              "isFile": true,
-              "isDir": false,
-              "file": "TodoList2.svelte",
-              "filepath": "/html/components/TodoList2.svelte",
-              "name": "TodoList2",
-              "ext": "svelte",
+              "isFile": false,
+              "isDir": true,
+              "file": "wknd11_Todo",
+              "filepath": "/html/components/wknd11_Todo",
+              "name": "wknd11_Todo",
+              "ext": "",
               "badExt": false,
-              "absolutePath": "E:/project/yujeong/src/pages/html/components/TodoList2.svelte",
-              "importPath": "../src/pages/html/components/TodoList2.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Todo",
+              "children": [
+                {
+                  "isFile": true,
+                  "isDir": false,
+                  "file": "ItemTitle.svelte",
+                  "filepath": "/html/components/wknd11_Todo/ItemTitle.svelte",
+                  "name": "ItemTitle",
+                  "ext": "svelte",
+                  "badExt": false,
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Todo/ItemTitle.svelte",
+                  "importPath": "../src/pages/html/components/wknd11_Todo/ItemTitle.svelte",
+                  "isLayout": false,
+                  "isReset": false,
+                  "isIndex": false,
+                  "isFallback": false,
+                  "isPage": true,
+                  "ownMeta": {},
+                  "meta": {
+                    "recursive": true,
+                    "preload": false,
+                    "prerender": true
+                  },
+                  "path": "/html/components/wknd11_Todo/ItemTitle",
+                  "id": "_html_components_wknd11_Todo_ItemTitle",
+                  "component": () => import('../src/pages/html/components/wknd11_Todo/ItemTitle.svelte').then(m => m.default)
+                },
+                {
+                  "isFile": true,
+                  "isDir": false,
+                  "file": "TodoInput11.svelte",
+                  "filepath": "/html/components/wknd11_Todo/TodoInput11.svelte",
+                  "name": "TodoInput11",
+                  "ext": "svelte",
+                  "badExt": false,
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Todo/TodoInput11.svelte",
+                  "importPath": "../src/pages/html/components/wknd11_Todo/TodoInput11.svelte",
+                  "isLayout": false,
+                  "isReset": false,
+                  "isIndex": false,
+                  "isFallback": false,
+                  "isPage": true,
+                  "ownMeta": {},
+                  "meta": {
+                    "recursive": true,
+                    "preload": false,
+                    "prerender": true
+                  },
+                  "path": "/html/components/wknd11_Todo/TodoInput11",
+                  "id": "_html_components_wknd11_Todo_TodoInput11",
+                  "component": () => import('../src/pages/html/components/wknd11_Todo/TodoInput11.svelte').then(m => m.default)
+                },
+                {
+                  "isFile": true,
+                  "isDir": false,
+                  "file": "TodoItem11.svelte",
+                  "filepath": "/html/components/wknd11_Todo/TodoItem11.svelte",
+                  "name": "TodoItem11",
+                  "ext": "svelte",
+                  "badExt": false,
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Todo/TodoItem11.svelte",
+                  "importPath": "../src/pages/html/components/wknd11_Todo/TodoItem11.svelte",
+                  "isLayout": false,
+                  "isReset": false,
+                  "isIndex": false,
+                  "isFallback": false,
+                  "isPage": true,
+                  "ownMeta": {},
+                  "meta": {
+                    "recursive": true,
+                    "preload": false,
+                    "prerender": true
+                  },
+                  "path": "/html/components/wknd11_Todo/TodoItem11",
+                  "id": "_html_components_wknd11_Todo_TodoItem11",
+                  "component": () => import('../src/pages/html/components/wknd11_Todo/TodoItem11.svelte').then(m => m.default)
+                },
+                {
+                  "isFile": true,
+                  "isDir": false,
+                  "file": "TodoList11.svelte",
+                  "filepath": "/html/components/wknd11_Todo/TodoList11.svelte",
+                  "name": "TodoList11",
+                  "ext": "svelte",
+                  "badExt": false,
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Todo/TodoList11.svelte",
+                  "importPath": "../src/pages/html/components/wknd11_Todo/TodoList11.svelte",
+                  "isLayout": false,
+                  "isReset": false,
+                  "isIndex": false,
+                  "isFallback": false,
+                  "isPage": true,
+                  "ownMeta": {},
+                  "meta": {
+                    "recursive": true,
+                    "preload": false,
+                    "prerender": true
+                  },
+                  "path": "/html/components/wknd11_Todo/TodoList11",
+                  "id": "_html_components_wknd11_Todo_TodoList11",
+                  "component": () => import('../src/pages/html/components/wknd11_Todo/TodoList11.svelte').then(m => m.default)
+                }
+              ],
               "isLayout": false,
               "isReset": false,
               "isIndex": false,
               "isFallback": false,
-              "isPage": true,
+              "isPage": false,
               "ownMeta": {},
               "meta": {
                 "recursive": true,
                 "preload": false,
                 "prerender": true
               },
-              "path": "/html/components/TodoList2",
-              "id": "_html_components_TodoList2",
-              "component": () => import('../src/pages/html/components/TodoList2.svelte').then(m => m.default)
+              "path": "/html/components/wknd11_Todo"
             }
           ],
           "isLayout": false,
@@ -330,31 +404,6 @@ export const _tree = {
             "prerender": true
           },
           "path": "/html/components"
-        },
-        {
-          "isFile": true,
-          "isDir": false,
-          "file": "todoApp.svelte",
-          "filepath": "/html/todoApp.svelte",
-          "name": "todoApp",
-          "ext": "svelte",
-          "badExt": false,
-          "absolutePath": "E:/project/yujeong/src/pages/html/todoApp.svelte",
-          "importPath": "../src/pages/html/todoApp.svelte",
-          "isLayout": false,
-          "isReset": false,
-          "isIndex": false,
-          "isFallback": false,
-          "isPage": true,
-          "ownMeta": {},
-          "meta": {
-            "recursive": true,
-            "preload": false,
-            "prerender": true
-          },
-          "path": "/html/todoApp",
-          "id": "_html_todoApp",
-          "component": () => import('../src/pages/html/todoApp.svelte').then(m => m.default)
         },
         {
           "isFile": true,
@@ -405,6 +454,31 @@ export const _tree = {
           "path": "/html/wknd10_AppTodo",
           "id": "_html_wknd10_AppTodo",
           "component": () => import('../src/pages/html/wknd10_AppTodo.svelte').then(m => m.default)
+        },
+        {
+          "isFile": true,
+          "isDir": false,
+          "file": "wknd11_App.svelte",
+          "filepath": "/html/wknd11_App.svelte",
+          "name": "wknd11_App",
+          "ext": "svelte",
+          "badExt": false,
+          "absolutePath": "E:/project/yujeong/src/pages/html/wknd11_App.svelte",
+          "importPath": "../src/pages/html/wknd11_App.svelte",
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": true,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/html/wknd11_App",
+          "id": "_html_wknd11_App",
+          "component": () => import('../src/pages/html/wknd11_App.svelte').then(m => m.default)
         }
       ],
       "isLayout": false,

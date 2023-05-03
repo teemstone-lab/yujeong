@@ -6,12 +6,14 @@
   "/html/components/HostTree",
   "/html/components/TodoHeader",
   "/html/components/TodoItem",
-  "/html/components/TodoItem2",
   "/html/components/TodoList",
-  "/html/components/TodoList2",
-  "/html/todoApp",
+  "/html/components/wknd11_Todo/ItemTitle",
+  "/html/components/wknd11_Todo/TodoInput11",
+  "/html/components/wknd11_Todo/TodoItem11",
+  "/html/components/wknd11_Todo/TodoList11",
   "/html/wknd9_main",
   "/html/wknd10_AppTodo",
+  "/html/wknd11_App",
   "/index",
   "/test/array"
 ]
