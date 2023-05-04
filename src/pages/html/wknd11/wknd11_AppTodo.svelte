@@ -1,7 +1,7 @@
 <script lang="ts">
-	import TodoInput from './components/wknd11_Todo/TodoInput11.svelte';
-	import TodoList2 from './components/wknd11_Todo/TodoList11.svelte';
-	import type { TodoItem, TodoList } from './types2';
+	import TodoInput from '../components/wknd11_Todo/TodoInput11.svelte';
+	import TodoList2 from '../components/wknd11_Todo/TodoList11.svelte';
+	import type { TodoItem, TodoList } from '../types2';
 	import { v4 as uuid } from 'uuid';
 
 	let todoList: TodoList = [];

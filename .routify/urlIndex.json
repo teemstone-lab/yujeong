@@ -7,13 +7,15 @@
   "/html/components/TodoHeader",
   "/html/components/TodoItem",
   "/html/components/TodoList",
+  "/html/components/wknd11_Fruit/FruitStore1",
   "/html/components/wknd11_Todo/ItemTitle",
   "/html/components/wknd11_Todo/TodoInput11",
   "/html/components/wknd11_Todo/TodoItem11",
   "/html/components/wknd11_Todo/TodoList11",
   "/html/wknd9_main",
   "/html/wknd10_AppTodo",
-  "/html/wknd11_App",
+  "/html/wknd11/wknd11_AppFruits",
+  "/html/wknd11/wknd11_AppTodo",
   "/index",
   "/test/array"
 ]

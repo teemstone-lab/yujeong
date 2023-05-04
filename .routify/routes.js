@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Wed May 03 2023 10:11:25 GMT+0900 (대한민국 표준시)
+ * File generated Thu May 04 2023 19:27:03 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-03T01:11:25.197Z"
+export const __timestamp = "2023-05-04T10:27:03.880Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -270,6 +270,55 @@ export const _tree = {
             {
               "isFile": false,
               "isDir": true,
+              "file": "wknd11_Fruit",
+              "filepath": "/html/components/wknd11_Fruit",
+              "name": "wknd11_Fruit",
+              "ext": "",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Fruit",
+              "children": [
+                {
+                  "isFile": true,
+                  "isDir": false,
+                  "file": "FruitStore1.svelte",
+                  "filepath": "/html/components/wknd11_Fruit/FruitStore1.svelte",
+                  "name": "FruitStore1",
+                  "ext": "svelte",
+                  "badExt": false,
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Fruit/FruitStore1.svelte",
+                  "importPath": "../src/pages/html/components/wknd11_Fruit/FruitStore1.svelte",
+                  "isLayout": false,
+                  "isReset": false,
+                  "isIndex": false,
+                  "isFallback": false,
+                  "isPage": true,
+                  "ownMeta": {},
+                  "meta": {
+                    "recursive": true,
+                    "preload": false,
+                    "prerender": true
+                  },
+                  "path": "/html/components/wknd11_Fruit/FruitStore1",
+                  "id": "_html_components_wknd11_Fruit_FruitStore1",
+                  "component": () => import('../src/pages/html/components/wknd11_Fruit/FruitStore1.svelte').then(m => m.default)
+                }
+              ],
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": false,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/components/wknd11_Fruit"
+            },
+            {
+              "isFile": false,
+              "isDir": true,
               "file": "wknd11_Todo",
               "filepath": "/html/components/wknd11_Todo",
               "name": "wknd11_Todo",
@@ -456,29 +505,78 @@ export const _tree = {
           "component": () => import('../src/pages/html/wknd10_AppTodo.svelte').then(m => m.default)
         },
         {
-          "isFile": true,
-          "isDir": false,
-          "file": "wknd11_App.svelte",
-          "filepath": "/html/wknd11_App.svelte",
-          "name": "wknd11_App",
-          "ext": "svelte",
+          "isFile": false,
+          "isDir": true,
+          "file": "wknd11",
+          "filepath": "/html/wknd11",
+          "name": "wknd11",
+          "ext": "",
           "badExt": false,
-          "absolutePath": "E:/project/yujeong/src/pages/html/wknd11_App.svelte",
-          "importPath": "../src/pages/html/wknd11_App.svelte",
+          "absolutePath": "E:/project/yujeong/src/pages/html/wknd11",
+          "children": [
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "wknd11_AppFruits.svelte",
+              "filepath": "/html/wknd11/wknd11_AppFruits.svelte",
+              "name": "wknd11_AppFruits",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/wknd11_AppFruits.svelte",
+              "importPath": "../src/pages/html/wknd11/wknd11_AppFruits.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/wknd11/wknd11_AppFruits",
+              "id": "_html_wknd11_wknd11_AppFruits",
+              "component": () => import('../src/pages/html/wknd11/wknd11_AppFruits.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "wknd11_AppTodo.svelte",
+              "filepath": "/html/wknd11/wknd11_AppTodo.svelte",
+              "name": "wknd11_AppTodo",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/wknd11_AppTodo.svelte",
+              "importPath": "../src/pages/html/wknd11/wknd11_AppTodo.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/wknd11/wknd11_AppTodo",
+              "id": "_html_wknd11_wknd11_AppTodo",
+              "component": () => import('../src/pages/html/wknd11/wknd11_AppTodo.svelte').then(m => m.default)
+            }
+          ],
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
           "isFallback": false,
-          "isPage": true,
+          "isPage": false,
           "ownMeta": {},
           "meta": {
             "recursive": true,
             "preload": false,
             "prerender": true
           },
-          "path": "/html/wknd11_App",
-          "id": "_html_wknd11_App",
-          "component": () => import('../src/pages/html/wknd11_App.svelte').then(m => m.default)
+          "path": "/html/wknd11"
         }
       ],
       "isLayout": false,

@@ -26,7 +26,8 @@
 
 	import Markup10 from './pages/html/wknd9_main.svelte';
 	import Markup11 from './pages/html/wknd10_AppTodo.svelte';
-	import Markup12 from './pages/html/wknd11_App.svelte';
+	import Markup12 from './pages/html/wknd11/wknd11_AppTodo.svelte';
+	import Markup13 from './pages/html/wknd11/wknd11_AppFruits.svelte';
 
 	// import Nav from './components/nav/Nav.svelte';
 
@@ -57,6 +58,12 @@
 			<div class="{`${currentPage === 'markup/markup12' ? 'on' : ''}`}"> markup/markup12</div>
 		</button></li
 	>
+
+	<li
+		><button on:click="{clickHandler}">
+			<div class="{`${currentPage === 'markup/markup13' ? 'on' : ''}`}"> markup/markup13</div>
+		</button></li
+	>
 </ul>
 
 <main>
@@ -74,5 +81,9 @@
 
 	{#if currentPage === 'markup/markup12'}
 		<div class="wrapper"><Markup12 /></div>
+	{/if}
+
+	{#if currentPage === 'markup/markup13'}
+		<div class="wrapper"><Markup13 /></div>
 	{/if}
 </main>
