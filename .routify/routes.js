@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Thu May 04 2023 19:27:03 GMT+0900 (대한민국 표준시)
+ * File generated Tue May 09 2023 17:53:34 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-04T10:27:03.880Z"
+export const __timestamp = "2023-05-09T08:53:34.942Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -24,29 +24,6 @@ export const _tree = {
   "ownMeta": {},
   "absolutePath": "src/pages",
   "children": [
-    {
-      "isFile": false,
-      "isDir": true,
-      "file": "async",
-      "filepath": "/async",
-      "name": "async",
-      "ext": "",
-      "badExt": false,
-      "absolutePath": "E:/project/yujeong/src/pages/async",
-      "children": [],
-      "isLayout": false,
-      "isReset": false,
-      "isIndex": false,
-      "isFallback": false,
-      "isPage": false,
-      "ownMeta": {},
-      "meta": {
-        "recursive": true,
-        "preload": false,
-        "prerender": true
-      },
-      "path": "/async"
-    },
     {
       "isFile": false,
       "isDir": true,
@@ -276,33 +253,7 @@ export const _tree = {
               "ext": "",
               "badExt": false,
               "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Fruit",
-              "children": [
-                {
-                  "isFile": true,
-                  "isDir": false,
-                  "file": "FruitStore1.svelte",
-                  "filepath": "/html/components/wknd11_Fruit/FruitStore1.svelte",
-                  "name": "FruitStore1",
-                  "ext": "svelte",
-                  "badExt": false,
-                  "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Fruit/FruitStore1.svelte",
-                  "importPath": "../src/pages/html/components/wknd11_Fruit/FruitStore1.svelte",
-                  "isLayout": false,
-                  "isReset": false,
-                  "isIndex": false,
-                  "isFallback": false,
-                  "isPage": true,
-                  "ownMeta": {},
-                  "meta": {
-                    "recursive": true,
-                    "preload": false,
-                    "prerender": true
-                  },
-                  "path": "/html/components/wknd11_Fruit/FruitStore1",
-                  "id": "_html_components_wknd11_Fruit_FruitStore1",
-                  "component": () => import('../src/pages/html/components/wknd11_Fruit/FruitStore1.svelte').then(m => m.default)
-                }
-              ],
+              "children": [],
               "isLayout": false,
               "isReset": false,
               "isIndex": false,
@@ -517,13 +468,13 @@ export const _tree = {
             {
               "isFile": true,
               "isDir": false,
-              "file": "wknd11_AppFruits.svelte",
-              "filepath": "/html/wknd11/wknd11_AppFruits.svelte",
-              "name": "wknd11_AppFruits",
+              "file": "practice_AppFruit.svelte",
+              "filepath": "/html/wknd11/practice_AppFruit.svelte",
+              "name": "practice_AppFruit",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/wknd11_AppFruits.svelte",
-              "importPath": "../src/pages/html/wknd11/wknd11_AppFruits.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/practice_AppFruit.svelte",
+              "importPath": "../src/pages/html/wknd11/practice_AppFruit.svelte",
               "isLayout": false,
               "isReset": false,
               "isIndex": false,
@@ -535,20 +486,20 @@ export const _tree = {
                 "preload": false,
                 "prerender": true
               },
-              "path": "/html/wknd11/wknd11_AppFruits",
-              "id": "_html_wknd11_wknd11_AppFruits",
-              "component": () => import('../src/pages/html/wknd11/wknd11_AppFruits.svelte').then(m => m.default)
+              "path": "/html/wknd11/practice_AppFruit",
+              "id": "_html_wknd11_practice_AppFruit",
+              "component": () => import('../src/pages/html/wknd11/practice_AppFruit.svelte').then(m => m.default)
             },
             {
               "isFile": true,
               "isDir": false,
-              "file": "wknd11_AppTodo.svelte",
-              "filepath": "/html/wknd11/wknd11_AppTodo.svelte",
-              "name": "wknd11_AppTodo",
+              "file": "practice_AppTodo.svelte",
+              "filepath": "/html/wknd11/practice_AppTodo.svelte",
+              "name": "practice_AppTodo",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/wknd11_AppTodo.svelte",
-              "importPath": "../src/pages/html/wknd11/wknd11_AppTodo.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/practice_AppTodo.svelte",
+              "importPath": "../src/pages/html/wknd11/practice_AppTodo.svelte",
               "isLayout": false,
               "isReset": false,
               "isIndex": false,
@@ -560,9 +511,59 @@ export const _tree = {
                 "preload": false,
                 "prerender": true
               },
-              "path": "/html/wknd11/wknd11_AppTodo",
-              "id": "_html_wknd11_wknd11_AppTodo",
-              "component": () => import('../src/pages/html/wknd11/wknd11_AppTodo.svelte').then(m => m.default)
+              "path": "/html/wknd11/practice_AppTodo",
+              "id": "_html_wknd11_practice_AppTodo",
+              "component": () => import('../src/pages/html/wknd11/practice_AppTodo.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "practice_FruitsShop.svelte",
+              "filepath": "/html/wknd11/practice_FruitsShop.svelte",
+              "name": "practice_FruitsShop",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/practice_FruitsShop.svelte",
+              "importPath": "../src/pages/html/wknd11/practice_FruitsShop.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/wknd11/practice_FruitsShop",
+              "id": "_html_wknd11_practice_FruitsShop",
+              "component": () => import('../src/pages/html/wknd11/practice_FruitsShop.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "wknd11_FruitShop.svelte",
+              "filepath": "/html/wknd11/wknd11_FruitShop.svelte",
+              "name": "wknd11_FruitShop",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/wknd11_FruitShop.svelte",
+              "importPath": "../src/pages/html/wknd11/wknd11_FruitShop.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/wknd11/wknd11_FruitShop",
+              "id": "_html_wknd11_wknd11_FruitShop",
+              "component": () => import('../src/pages/html/wknd11/wknd11_FruitShop.svelte').then(m => m.default)
             }
           ],
           "isLayout": false,

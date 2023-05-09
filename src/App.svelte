@@ -26,8 +26,9 @@
 
 	import Markup10 from './pages/html/wknd9_main.svelte';
 	import Markup11 from './pages/html/wknd10_AppTodo.svelte';
-	import Markup12 from './pages/html/wknd11/wknd11_AppTodo.svelte';
-	import Markup13 from './pages/html/wknd11/wknd11_AppFruits.svelte';
+	import Markup12 from './pages/html/wknd11/practice_AppTodo.svelte';
+	import Markup13 from './pages/html/wknd11/practice_AppFruit.svelte';
+	import FruitStore from './pages/html/wknd11/wknd11_FruitShop.svelte';
 
 	// import Nav from './components/nav/Nav.svelte';
 
@@ -64,6 +65,12 @@
 			<div class="{`${currentPage === 'markup/markup13' ? 'on' : ''}`}"> markup/markup13</div>
 		</button></li
 	>
+
+	<li
+		><button on:click="{clickHandler}">
+			<div class="{`${currentPage === 'drag/drop' ? 'on' : ''}`}"> drag/drop</div>
+		</button></li
+	>
 </ul>
 
 <main>
@@ -85,5 +92,9 @@
 
 	{#if currentPage === 'markup/markup13'}
 		<div class="wrapper"><Markup13 /></div>
+	{/if}
+
+	{#if currentPage === 'drag/drop'}
+		<div class="wrapper"><FruitStore /></div>
 	{/if}
 </main>
