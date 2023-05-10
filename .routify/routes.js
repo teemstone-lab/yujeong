@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Wed May 10 2023 11:08:35 GMT+0900 (대한민국 표준시)
+ * File generated Wed May 10 2023 17:20:10 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-10T02:08:35.768Z"
+export const __timestamp = "2023-05-10T08:20:10.702Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -465,6 +465,31 @@ export const _tree = {
           "badExt": false,
           "absolutePath": "E:/project/yujeong/src/pages/html/wknd11",
           "children": [
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "pr2_appFruit.svelte",
+              "filepath": "/html/wknd11/pr2_appFruit.svelte",
+              "name": "pr2_appFruit",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/pr2_appFruit.svelte",
+              "importPath": "../src/pages/html/wknd11/pr2_appFruit.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/wknd11/pr2_appFruit",
+              "id": "_html_wknd11_pr2_appFruit",
+              "component": () => import('../src/pages/html/wknd11/pr2_appFruit.svelte').then(m => m.default)
+            },
             {
               "isFile": true,
               "isDir": false,
