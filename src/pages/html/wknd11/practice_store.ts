@@ -25,4 +25,5 @@ export const createStore = () => {
 	return result;
 };
 
+export type CreateStoreType = ReturnType<typeof createStore>;
 export const store1 = createStore();

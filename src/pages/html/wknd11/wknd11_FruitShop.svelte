@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Fruitsstore, Fstore } from './types';
-	import { fruitsstore, fruits, fruitsShop, dragStart, drop } from './wknd11_FruitShop_store';
+	import { fruitsstore, dragStart, drop } from './wknd11_FruitShop_store';
 </script>
 
 {#each $fruitsstore as fstore, fstoreIndex (fstore)}
@@ -10,13 +10,13 @@
 		on:drop="{(event) => drop(event, fstoreIndex)}"
 		on:dragover|preventDefault="{() => false}"
 	>
-		{#each fstore.products as fruit, fruitIndex (fruit)}
+		{#each fstore.products as fruit, fruitIndex (fruit.uuid)}
 			<li
 				class="border-2 border-solid border-blue-300"
 				draggable="{true}"
-				on:dragstart="{(event) => dragStart(event, fstoreIndex, fruitIndex)}"
+				on:dragstart="{(event) => dragStart(event, fstoreIndex, fruit.uuid)}"
 			>
-				{fruit}
+				{fruit.icon}
 			</li>
 		{/each}
 	</ul>
