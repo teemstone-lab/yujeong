@@ -40,7 +40,7 @@ export const storeInit = [
 // 스토어 선언
 export const Stores = writable<Shop[]>(storeInit);
 
-//* app.svelte 에서 각각의 과일가게들은 add 버튼과 delete 버튼을 가짐.
+// 과일가게들은 add 버튼과 delete 버튼을 가짐.
 //      단일 과일가게는 add() 와, delete() 를 가져야 함
 //      add(과일객체) => {     ]]]]]]더하고}
 //      delete(과일id) => {       ]]]]]]뺌}

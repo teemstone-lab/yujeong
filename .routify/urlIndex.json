@@ -4,6 +4,8 @@
   "/html/components/Footer",
   "/html/components/Header",
   "/html/components/HostTree",
+  "/html/components/pr2_Fruit/FruitProducts",
+  "/html/components/pr2_Fruit/FruitsShop",
   "/html/components/TodoHeader",
   "/html/components/TodoItem",
   "/html/components/TodoList",

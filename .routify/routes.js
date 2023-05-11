@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Wed May 10 2023 17:20:10 GMT+0900 (대한민국 표준시)
+ * File generated Thu May 11 2023 21:10:17 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-10T08:20:10.702Z"
+export const __timestamp = "2023-05-11T12:10:17.136Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -170,6 +170,80 @@ export const _tree = {
               "component": () => import('../src/pages/html/components/HostTree.svelte').then(m => m.default)
             },
             {
+              "isFile": false,
+              "isDir": true,
+              "file": "pr2_Fruit",
+              "filepath": "/html/components/pr2_Fruit",
+              "name": "pr2_Fruit",
+              "ext": "",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/pr2_Fruit",
+              "children": [
+                {
+                  "isFile": true,
+                  "isDir": false,
+                  "file": "FruitProducts.svelte",
+                  "filepath": "/html/components/pr2_Fruit/FruitProducts.svelte",
+                  "name": "FruitProducts",
+                  "ext": "svelte",
+                  "badExt": false,
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/pr2_Fruit/FruitProducts.svelte",
+                  "importPath": "../src/pages/html/components/pr2_Fruit/FruitProducts.svelte",
+                  "isLayout": false,
+                  "isReset": false,
+                  "isIndex": false,
+                  "isFallback": false,
+                  "isPage": true,
+                  "ownMeta": {},
+                  "meta": {
+                    "recursive": true,
+                    "preload": false,
+                    "prerender": true
+                  },
+                  "path": "/html/components/pr2_Fruit/FruitProducts",
+                  "id": "_html_components_pr2_Fruit_FruitProducts",
+                  "component": () => import('../src/pages/html/components/pr2_Fruit/FruitProducts.svelte').then(m => m.default)
+                },
+                {
+                  "isFile": true,
+                  "isDir": false,
+                  "file": "FruitsShop.svelte",
+                  "filepath": "/html/components/pr2_Fruit/FruitsShop.svelte",
+                  "name": "FruitsShop",
+                  "ext": "svelte",
+                  "badExt": false,
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/pr2_Fruit/FruitsShop.svelte",
+                  "importPath": "../src/pages/html/components/pr2_Fruit/FruitsShop.svelte",
+                  "isLayout": false,
+                  "isReset": false,
+                  "isIndex": false,
+                  "isFallback": false,
+                  "isPage": true,
+                  "ownMeta": {},
+                  "meta": {
+                    "recursive": true,
+                    "preload": false,
+                    "prerender": true
+                  },
+                  "path": "/html/components/pr2_Fruit/FruitsShop",
+                  "id": "_html_components_pr2_Fruit_FruitsShop",
+                  "component": () => import('../src/pages/html/components/pr2_Fruit/FruitsShop.svelte').then(m => m.default)
+                }
+              ],
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": false,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/components/pr2_Fruit"
+            },
+            {
               "isFile": true,
               "isDir": false,
               "file": "TodoHeader.svelte",
@@ -243,29 +317,6 @@ export const _tree = {
               "path": "/html/components/TodoList",
               "id": "_html_components_TodoList",
               "component": () => import('../src/pages/html/components/TodoList.svelte').then(m => m.default)
-            },
-            {
-              "isFile": false,
-              "isDir": true,
-              "file": "wknd11_Fruit",
-              "filepath": "/html/components/wknd11_Fruit",
-              "name": "wknd11_Fruit",
-              "ext": "",
-              "badExt": false,
-              "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Fruit",
-              "children": [],
-              "isLayout": false,
-              "isReset": false,
-              "isIndex": false,
-              "isFallback": false,
-              "isPage": false,
-              "ownMeta": {},
-              "meta": {
-                "recursive": true,
-                "preload": false,
-                "prerender": true
-              },
-              "path": "/html/components/wknd11_Fruit"
             },
             {
               "isFile": false,
