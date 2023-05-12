@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { FruitShops, Shop, Fruits, Fruit } from './pr2_type';
+import type { FruitShops, Shop, Fruits, Fruit } from './pr2_type';
 import { v4 as uuid } from 'uuid';
 
 // 단일 과일은 객체 : Fruit = {name, id, emoji}
@@ -31,10 +31,10 @@ export const createFruit = (fruitName: FruitName) => ({
 // 				화면에 보여줄 과일가게는 4개; shop1 ~ shop4
 // 				과일가게들을 하나의 배열에 담기; fruitShop = Shop[]
 export const storeInit = [
-	{ name: '가게1', id: uuid(), products: [createFruit('Peach')] },
-	{ name: '가게2', id: uuid(), products: [createFruit('Peach')] },
-	{ name: '가게3', id: uuid(), products: [createFruit('Peach')] },
-	{ name: '가게4', id: uuid(), products: [createFruit('Peach')] },
+	{ name: 'TeemStone', id: uuid(), products: [createFruit('Peach')] },
+	{ name: 'onTune', id: uuid(), products: [createFruit('Peach')] },
+	{ name: 'Yujeong', id: uuid(), products: [createFruit('Peach')] },
+	{ name: 'FE', id: uuid(), products: [createFruit('Peach')] },
 ];
 
 // 스토어 선언

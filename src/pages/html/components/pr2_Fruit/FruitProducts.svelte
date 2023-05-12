@@ -21,19 +21,21 @@
 	}
 </script>
 
-{#each products as fruit}
-	<li
-		class="flex border-[1px] border-solid border-pink-300"
-		draggable="true"
-		on:dragstart="{(e) => {
-			dragStart(e, fruit);
-			selectShopIndex = shopIndex; //dragStart 할 때의 시점을 받아온다. 이 때, shopIndex를 ul을 그려주는 과일가게 리스트에서 props 로 받아와야하기때문에 export let 처리를 해줘야한다.
-			console.log(selectShopIndex);
-		}}"
-	>
-		{fruit.emoji}
-	</li>
-{/each}
+<ul class="flex flex-wrap justify-center pt-2">
+	{#each products as fruit}
+		<li
+			class="flex border-[1px] border-solid border-pink-300 p-1 text-2xl hover:bg-sky-400"
+			draggable="true"
+			on:dragstart="{(e) => {
+				dragStart(e, fruit);
+				selectShopIndex = shopIndex; //dragStart 할 때의 시점을 받아온다. 이 때, shopIndex를 ul을 그려주는 과일가게 리스트에서 props 로 받아와야하기때문에 export let 처리를 해줘야한다.
+				console.log('DRAG START STORE INDEX:', selectShopIndex);
+			}}"
+		>
+			{fruit.emoji}
+		</li>
+	{/each}
+</ul>
 
 <!-- {#each shop.products as fruit}
         <li>{fruit.emoji}</li>

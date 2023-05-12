@@ -24,10 +24,10 @@
 	let currentPage = 'index';
 	import Index from './pages/index.svelte';
 
-	import Markup10 from './pages/html/wknd9_main.svelte';
-	import Markup11 from './pages/html/wknd10_AppTodo.svelte';
-	import Markup12 from './pages/html/wknd11/practice_AppTodo.svelte';
-	import Markup13 from './pages/html/wknd11/practice_AppFruit.svelte';
+	import WebWorker from './pages/html/wknd9_main.svelte';
+	import TodoList1 from './pages/html/wknd10_AppTodo.svelte';
+	import TodoList2 from './pages/html/wknd11/practice_AppTodo.svelte';
+	import SelectAdd from './pages/html/wknd11/practice_AppFruit.svelte';
 	import FruitStore from './pages/html/wknd11/wknd11_FruitShop.svelte';
 	import FruitStore2 from './pages/html/wknd11/pr2_appFruit.svelte';
 
@@ -45,25 +45,25 @@
 <ul>
 	<li
 		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup10' ? 'on' : ''}`}"> markup/markup10</div>
+			<div class="{`${currentPage === 'WebWorker' ? 'on' : ''}`}"> WebWorker</div>
 		</button></li
 	>
 
 	<li
 		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup11' ? 'on' : ''}`}"> markup/markup11</div>
+			<div class="{`${currentPage === 'TodoList1' ? 'on' : ''}`}"> TodoList1</div>
 		</button></li
 	>
 
 	<li
 		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup12' ? 'on' : ''}`}"> markup/markup12</div>
+			<div class="{`${currentPage === 'TodoList2' ? 'on' : ''}`}"> TodoList2</div>
 		</button></li
 	>
 
 	<li
 		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup13' ? 'on' : ''}`}"> markup/markup13</div>
+			<div class="{`${currentPage === 'SelectAdd' ? 'on' : ''}`}"> SelectAdd</div>
 		</button></li
 	>
 
@@ -85,20 +85,20 @@
 		<div class="wrapper"><Index /></div>
 	{/if}
 
-	{#if currentPage === 'markup/markup10'}
-		<div class="wrapper"><Markup10 /></div>
+	{#if currentPage === 'WebWorker'}
+		<div class="wrapper"><WebWorker /></div>
 	{/if}
 
-	{#if currentPage === 'markup/markup11'}
-		<div class="wrapper"><Markup11 /></div>
+	{#if currentPage === 'TodoList1'}
+		<div class="wrapper"><TodoList1 /></div>
 	{/if}
 
-	{#if currentPage === 'markup/markup12'}
-		<div class="wrapper"><Markup12 /></div>
+	{#if currentPage === 'TodoList2'}
+		<div class="wrapper"><TodoList2 /></div>
 	{/if}
 
-	{#if currentPage === 'markup/markup13'}
-		<div class="wrapper"><Markup13 /></div>
+	{#if currentPage === 'SelectAdd'}
+		<div class="wrapper"><SelectAdd /></div>
 	{/if}
 
 	{#if currentPage === 'drag/drop'}
