@@ -23,17 +23,13 @@
 <script lang="ts">
 	let currentPage = 'index';
 	import Index from './pages/index.svelte';
-	import Markup1 from './pages/html/html1.svelte';
-	import Markup2 from './pages/html/html2.svelte';
-	import Markup3 from './pages/html/html3.svelte';
-	import Markup4 from './pages/html/html4.svelte';
-	import Markup5 from './pages/html/html5.svelte';
-	import Markup6 from './pages/html/html6.svelte';
-	import Markup7 from './pages/html/html7.svelte';
-	import Markup8 from './pages/html/html8.svelte';
-	import Markup9 from './pages/html/html9.svelte';
-	import Markup10 from './pages/html/wknd9_main.svelte';
-	import Markup11 from './pages/html/html11.svelte';
+
+	import WebWorker from './pages/html/wknd9_main.svelte';
+	import TodoList1 from './pages/html/wknd10_AppTodo.svelte';
+	import TodoList2 from './pages/html/wknd11/practice_AppTodo.svelte';
+	import SelectAdd from './pages/html/wknd11/practice_AppFruit.svelte';
+	import FruitStore from './pages/html/wknd11/wknd11_FruitShop.svelte';
+	import FruitStore2 from './pages/html/wknd11/pr2_appFruit.svelte';
 
 	// import Nav from './components/nav/Nav.svelte';
 
@@ -49,68 +45,37 @@
 <ul>
 	<li
 		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup10' ? 'on' : ''}`}"> markup/markup10</div>
-		</button></li
-	>
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup1' ? 'on' : ''}`}"> markup/markup1</div>
-		</button></li
-	>
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup2' ? 'on' : ''}`}">markup/markup2</div>
-		</button></li
-	>
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup3' ? 'on' : ''}`}">markup/markup3</div>
-		</button></li
-	>
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup4' ? 'on' : ''}`}"> markup/markup4</div>
-		</button></li
-	>
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup5' ? 'on' : ''}`}"> markup/markup5</div>
+			<div class="{`${currentPage === 'WebWorker' ? 'on' : ''}`}"> WebWorker</div>
 		</button></li
 	>
 
 	<li
 		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup6' ? 'on' : ''}`}"> markup/markup6</div>
+			<div class="{`${currentPage === 'TodoList1' ? 'on' : ''}`}"> TodoList1</div>
 		</button></li
 	>
 
 	<li
 		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup7' ? 'on' : ''}`}"> markup/markup7</div>
+			<div class="{`${currentPage === 'TodoList2' ? 'on' : ''}`}"> TodoList2</div>
 		</button></li
 	>
 
 	<li
 		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup8' ? 'on' : ''}`}"> markup/markup8</div>
+			<div class="{`${currentPage === 'SelectAdd' ? 'on' : ''}`}"> SelectAdd</div>
 		</button></li
 	>
 
 	<li
 		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup9' ? 'on' : ''}`}"> markup/markup9</div>
+			<div class="{`${currentPage === 'drag/drop' ? 'on' : ''}`}"> drag/drop</div>
 		</button></li
 	>
 
 	<li
 		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup10' ? 'on' : ''}`}"> markup/markup10</div>
-		</button></li
-	>
-
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'markup/markup11' ? 'on' : ''}`}"> markup/markup11</div>
+			<div class="{`${currentPage === 'FruitStore2' ? 'on' : ''}`}"> FruitStore2</div>
 		</button></li
 	>
 </ul>
@@ -119,39 +84,28 @@
 	{#if currentPage === 'index'}
 		<div class="wrapper"><Index /></div>
 	{/if}
-	{#if currentPage === 'markup/markup1'}
-		<div class="wrapper"><Markup1 /></div>
-	{/if}
-	{#if currentPage === 'markup/markup2'}
-		<div class="wrapper"><Markup2 /></div>
-	{/if}
-	{#if currentPage === 'markup/markup3'}
-		<div class="wrapper"><Markup3 /></div>
-	{/if}
-	{#if currentPage === 'markup/markup4'}
-		<div class="wrapper"><Markup4 /></div>
-	{/if}
-	{#if currentPage === 'markup/markup5'}
-		<div class="wrapper"><Markup5 /></div>
-	{/if}
-	{#if currentPage === 'markup/markup6'}
-		<div class="wrapper"><Markup6 /></div>
-	{/if}
-	{#if currentPage === 'markup/markup7'}
-		<div class="wrapper"><Markup7 /></div>
-	{/if}
-	{#if currentPage === 'markup/markup8'}
-		<div class="wrapper"><Markup8 /></div>
-	{/if}
-	{#if currentPage === 'markup/markup9'}
-		<div class="wrapper"><Markup9 /></div>
+
+	{#if currentPage === 'WebWorker'}
+		<div class="wrapper"><WebWorker /></div>
 	{/if}
 
-	{#if currentPage === 'markup/markup10'}
-		<div class="wrapper"><Markup10 /></div>
+	{#if currentPage === 'TodoList1'}
+		<div class="wrapper"><TodoList1 /></div>
 	{/if}
 
-	{#if currentPage === 'markup/markup11'}
-		<div class="wrapper"><Markup11 /></div>
+	{#if currentPage === 'TodoList2'}
+		<div class="wrapper"><TodoList2 /></div>
+	{/if}
+
+	{#if currentPage === 'SelectAdd'}
+		<div class="wrapper"><SelectAdd /></div>
+	{/if}
+
+	{#if currentPage === 'drag/drop'}
+		<div class="wrapper"><FruitStore /></div>
+	{/if}
+
+	{#if currentPage === 'FruitStore2'}
+		<div class="wrapper"><FruitStore2 /></div>
 	{/if}
 </main>
