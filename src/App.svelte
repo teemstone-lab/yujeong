@@ -50,21 +50,57 @@
 	$: {
 		console.log(isMswLoad);
 	}
+
+	let hostList = [];
+	let osInfo = [];
+
+	function getHostList() {
+		return fetch('/hostList', { method: 'GET' })
+			.then((response) => response.json())
+			.then((hostData) => {
+				console.log('hostList', hostData);
+				hostList = hostData;
+				return hostData;
+			})
+			.catch(() => {});
+	}
+
+	function getOsInfo() {
+		return fetch('/osInfo', { method: 'GET' })
+			.then((response) => response.json())
+			.then((osData) => {
+				console.log('osInfo', osData);
+				osInfo = osData;
+				return osData;
+			})
+			.catch(() => {});
+	}
 </script>
 
 <button
-	on:click="{() => {
+	on:click="{async () => {
 		console.log(isMswLoad);
-		fetch('/hostList', { method: 'GET' })
-			.then((response) => response.json())
-			.then((data) => console.log('hostList', data))
-			.catch(() => {});
-		fetch('/osInfo', { method: 'GET' })
-			.then((response) => response.json())
-			.then((data) => console.log('osInfo', data))
-			.catch(() => {});
-	}}">ss</button
+		await getHostList();
+		await getOsInfo();
+	}}">mock data 받아오기</button
 >
+
+<div>
+	<h2>Host List</h2>
+	{#each hostList as host}
+		<div>host ID: {host.id}</div>
+	{/each}
+</div>
+
+<div>
+	<h2>OS Info</h2>
+
+	{#each osInfo as os}
+		<div class="flex flex-row">name: {os.name}</div>
+		<div class="flex flex-row">cpu: {os.cpu}</div>
+		<div class="flex flex-row">memory: {os.memory}</div>
+	{/each}
+</div>
 
 <ul>
 	<li
