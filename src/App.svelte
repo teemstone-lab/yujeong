@@ -40,7 +40,31 @@
 		const target = e.target as HTMLButtonElement;
 		currentPage = target.innerText;
 	};
+	let isMswLoad;
+	const initMsw = async () => {
+		const { worker } = await import('./mocks/browser');
+		worker.start().then((res) => (isMswLoad = res));
+	};
+	initMsw();
+
+	$: {
+		console.log(isMswLoad);
+	}
 </script>
+
+<button
+	on:click="{() => {
+		console.log(isMswLoad);
+		fetch('/hostList', { method: 'GET' })
+			.then((response) => response.json())
+			.then((data) => console.log('hostList', data))
+			.catch(() => {});
+		fetch('/osInfo', { method: 'GET' })
+			.then((response) => response.json())
+			.then((data) => console.log('osInfo', data))
+			.catch(() => {});
+	}}">ss</button
+>
 
 <ul>
 	<li

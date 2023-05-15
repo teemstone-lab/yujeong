@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Fruit, Fruits } from '../types2';
-	import type { CreateStoreType } from './practice_store';
+
 	import { v4 as uuid } from 'uuid';
 	export let currentSelectItem: Fruit | null;
 	export let store: any;

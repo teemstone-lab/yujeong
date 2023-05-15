@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Fri May 12 2023 16:50:03 GMT+0900 (대한민국 표준시)
+ * File generated Mon May 15 2023 15:49:20 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-12T07:50:03.892Z"
+export const __timestamp = "2023-05-15T06:49:20.535Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -654,6 +654,55 @@ export const _tree = {
             "prerender": true
           },
           "path": "/html/wknd11"
+        },
+        {
+          "isFile": false,
+          "isDir": true,
+          "file": "wknd12",
+          "filepath": "/html/wknd12",
+          "name": "wknd12",
+          "ext": "",
+          "badExt": false,
+          "absolutePath": "E:/project/yujeong/src/pages/html/wknd12",
+          "children": [
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "wknd12_main.svelte",
+              "filepath": "/html/wknd12/wknd12_main.svelte",
+              "name": "wknd12_main",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12/wknd12_main.svelte",
+              "importPath": "../src/pages/html/wknd12/wknd12_main.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/wknd12/wknd12_main",
+              "id": "_html_wknd12_wknd12_main",
+              "component": () => import('../src/pages/html/wknd12/wknd12_main.svelte').then(m => m.default)
+            }
+          ],
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": false,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/html/wknd12"
         }
       ],
       "isLayout": false,
