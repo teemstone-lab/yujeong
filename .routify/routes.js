@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Mon May 15 2023 16:45:44 GMT+0900 (대한민국 표준시)
+ * File generated Tue May 16 2023 14:06:25 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-15T07:45:44.735Z"
+export const __timestamp = "2023-05-16T05:06:25.818Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -668,13 +668,13 @@ export const _tree = {
             {
               "isFile": true,
               "isDir": false,
-              "file": "wknd12_main.svelte",
-              "filepath": "/html/wknd12/wknd12_main.svelte",
-              "name": "wknd12_main",
+              "file": "wknd12_app.svelte",
+              "filepath": "/html/wknd12/wknd12_app.svelte",
+              "name": "wknd12_app",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12/wknd12_main.svelte",
-              "importPath": "../src/pages/html/wknd12/wknd12_main.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12/wknd12_app.svelte",
+              "importPath": "../src/pages/html/wknd12/wknd12_app.svelte",
               "isLayout": false,
               "isReset": false,
               "isIndex": false,
@@ -686,9 +686,9 @@ export const _tree = {
                 "preload": false,
                 "prerender": true
               },
-              "path": "/html/wknd12/wknd12_main",
-              "id": "_html_wknd12_wknd12_main",
-              "component": () => import('../src/pages/html/wknd12/wknd12_main.svelte').then(m => m.default)
+              "path": "/html/wknd12/wknd12_app",
+              "id": "_html_wknd12_wknd12_app",
+              "component": () => import('../src/pages/html/wknd12/wknd12_app.svelte').then(m => m.default)
             }
           ],
           "isLayout": false,
