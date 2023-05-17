@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Tue May 16 2023 14:06:25 GMT+0900 (대한민국 표준시)
+ * File generated Wed May 17 2023 15:29:21 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-16T05:06:25.818Z"
+export const __timestamp = "2023-05-17T06:29:21.599Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -668,13 +668,13 @@ export const _tree = {
             {
               "isFile": true,
               "isDir": false,
-              "file": "wknd12_app.svelte",
-              "filepath": "/html/wknd12/wknd12_app.svelte",
-              "name": "wknd12_app",
+              "file": "Circle.svelte",
+              "filepath": "/html/wknd12/Circle.svelte",
+              "name": "Circle",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12/wknd12_app.svelte",
-              "importPath": "../src/pages/html/wknd12/wknd12_app.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12/Circle.svelte",
+              "importPath": "../src/pages/html/wknd12/Circle.svelte",
               "isLayout": false,
               "isReset": false,
               "isIndex": false,
@@ -686,9 +686,34 @@ export const _tree = {
                 "preload": false,
                 "prerender": true
               },
-              "path": "/html/wknd12/wknd12_app",
-              "id": "_html_wknd12_wknd12_app",
-              "component": () => import('../src/pages/html/wknd12/wknd12_app.svelte').then(m => m.default)
+              "path": "/html/wknd12/Circle",
+              "id": "_html_wknd12_Circle",
+              "component": () => import('../src/pages/html/wknd12/Circle.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "wknd12_main.svelte",
+              "filepath": "/html/wknd12/wknd12_main.svelte",
+              "name": "wknd12_main",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12/wknd12_main.svelte",
+              "importPath": "../src/pages/html/wknd12/wknd12_main.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/wknd12/wknd12_main",
+              "id": "_html_wknd12_wknd12_main",
+              "component": () => import('../src/pages/html/wknd12/wknd12_main.svelte').then(m => m.default)
             }
           ],
           "isLayout": false,

@@ -33,7 +33,7 @@
 	import SelectAdd from './pages/html/wknd11/practice_AppFruit.svelte';
 	import FruitStore from './pages/html/wknd11/wknd11_FruitShop.svelte';
 	import FruitStore2 from './pages/html/wknd11/pr2_appFruit.svelte';
-	import MSW from './pages/html/wknd12/wknd12_app.svelte';
+	import MSW from './pages/html/wknd12/wknd12_main.svelte';
 
 	// import Nav from './components/nav/Nav.svelte';
 
@@ -45,71 +45,22 @@
 		currentPage = target.innerText;
 	};
 
-	// let isMswLoad;
-	// const initMsw = async () => {
-	// 	const { worker } = await import('./mocks/browser');
-	// 	worker.start().then((res) => (isMswLoad = res));
-	// };
-	// initMsw();
+	let isMswLoad;
+	const initMsw = async () => {
+		const { worker } = await import('./mocks/browser');
+		worker
+			.start()
+			.then((res) => (isMswLoad = true))
+			.catch((err: { message: string }) => {
+				throw new Error(err.message);
+			});
+	};
+	initMsw();
 
 	// $: {
 	// 	console.log(isMswLoad);
 	// }
-
-	// let hostList = [];
-	// let osInfo = [];
-
-	// function getHostList() {
-	// 	return fetch('/hostList', { method: 'GET' })
-	// 		.then((response) => response.json())
-	// 		.then((hostData) => {
-	// 			console.log('hostList', hostData);
-	// 			hostList = hostData;
-	// 			return hostData;
-	// 		})
-	// 		.catch(() => {});
-	// }
-
-	// function getOsInfo() {
-	// 	return fetch('/osInfo', { method: 'GET' })
-	// 		.then((response) => response.json())
-	// 		.then((osData) => {
-	// 			console.log('osInfo', osData);
-	// 			osInfo = osData;
-	// 			return osData;
-	// 		})
-	// 		.catch(() => {});
-	// }
 </script>
-
-<!-- <button
-	on:click="{async () => {
-		console.log(isMswLoad);
-		await getHostList();
-		await getOsInfo();
-	}}">mock data 받아오기</button
->
-<div class="flex gap-x-2">
-	<ul>
-		<h2>Host List</h2>
-		{#each hostList as host}
-			<ul>
-				<div>host ID: {host.id}</div>
-			</ul>
-		{/each}
-	</ul>
-
-	<ul class="flex flex-col">
-		<h2>OS Info</h2>
-		{#each osInfo as os}
-			<ul class="flex gap-x-2">
-				<div class="flex flex-row">name: {os.name}</div>
-				<div class="flex flex-row">cpu: {os.cpu}</div>
-				<div class="flex flex-row">memory: {os.memory}</div>
-			</ul>
-		{/each}
-	</ul>
-</div> -->
 
 <div class="table">
 	<ul>
