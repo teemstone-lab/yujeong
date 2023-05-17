@@ -229,7 +229,7 @@
 		return (cpu / maxCpu) * maxHeight;
 	}
 
-	function calculateMemBarH(memory) {
+	function calculateMemBarH(memory: number) {
 		const maxMemory = 100;
 		const maxHeight = 300;
 		return (memory / maxMemory) * maxHeight;
@@ -254,10 +254,11 @@
 				<div class="flex flex-row">cpu: {os.cpu}</div>
 				<div class="flex flex-row">memory: {os.memory}</div>
 				<!-- cpu, memory 값 따라 바뀌는 바차트 그리는 부분 -->
-				<div class="flex w-[30px] bg-blue-500" style="height: {calculateCpuBarH(os.cpu)}px;"
-				></div>
 				<div
-					class="flex w-[30px] bg-red-500"
+					class="flex  w-[30px] bg-blue-500"
+					style="height: {calculateCpuBarH(os.cpu)}px;"></div>
+				<div
+					class="flex  w-[30px] bg-red-500"
 					style="height: {calculateMemBarH(os.memory)}px;"></div>
 			</ul>
 		{/each}

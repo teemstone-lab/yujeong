@@ -228,12 +228,35 @@
 			}
 		});
 	});
+
+	let selectedResource = '';
+	function handleSelectResource(
+		e: Event & {
+			currentTarget: EventTarget & HTMLSelectElement;
+		},
+	) {
+		selectedResource = e.currentTarget.value;
+		console.log('SELECT:', selectedResource);
+	}
 </script>
 
 <input type="number" bind:value="{percentage}" />
 
 <div class="mt-2 flex flex-row justify-center border-[1px] border-solid border-black">
 	<p>{doublePercentage}</p>
+	<div class="flex border-2 border-solid border-gray-800">
+		<button bind:this="{settingButton}" class="flex justify-end" id="settingButton">⚙</button>
+		<select
+			bind:this="{selectBox}"
+			on:change="{handleSelectResource}"
+			class="hidden h-[20px] w-[100px]"
+			id="selectBox"
+		>
+			<option value="onlyCPU">CPU</option>
+			<option value="onlyMEM">Memory</option>
+			<option value="cpuMem">CPU + Memory</option>
+		</select>
+	</div>
 	<div class="flex basis-1/2 justify-center">
 		<div class="graph">
 			<div
@@ -263,11 +286,5 @@
 				</div>
 			</div>
 		</div>
-		<button bind:this="{settingButton}" class="flex justify-end" id="settingButton">⚙</button>
-		<select bind:this="{selectBox}" id="selectBox">
-			<option value="onlyCPU">CPU</option>
-			<option value="onlyMEM">Memory</option>
-			<option value="cpuMem">CPU + Memory</option>
-		</select>
 	</div>
 </div>

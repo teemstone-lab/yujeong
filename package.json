@@ -45,6 +45,7 @@
     "@testing-library/user-event": "^14.4.3",
     "@tsconfig/svelte": "^3.0.0",
     "@types/jest": "^29.2.5",
+    "@types/ws": "^8.5.4",
     "@typescript-eslint/eslint-plugin": "^5.48.1",
     "@typescript-eslint/parser": "^5.48.1",
     "autoprefixer": "^10.4.13",
@@ -91,7 +92,8 @@
   },
   "dependencies": {
     "@types/uuid": "^9.0.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "ws": "^8.13.0"
   },
   "msw": {
     "workerDirectory": "public"

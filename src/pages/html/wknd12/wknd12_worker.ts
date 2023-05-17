@@ -1,3 +1,24 @@
+// 웹 소켓 연결하기
+const ws = new WebSocket('ws:localhost:8080');
+
+ws.onopen = () => {
+	console.log('연결! WebSocket');
+};
+
+ws.onmessage = (event) => {
+	const message = JSON.parse(event.data);
+	const { dataName, result } = message;
+
+	if (dataName === 'hostList') {
+		postMessage({ dataName, result });
+		ws.send(JSON.stringify({ action: getOsInfo }));
+	}
+
+	if (dataName === 'osInfo') {
+		postMessage({ dataName, result });
+	}
+};
+//
 let hostList = [];
 let osInfo = [];
 

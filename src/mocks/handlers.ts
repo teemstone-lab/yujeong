@@ -1,6 +1,10 @@
 import { rest } from 'msw';
 import { v4 as uuid } from 'uuid';
+// import { WebSocketServer } from 'ws';
 
+//
+// const wss = new WebSocketServer({ port: 8080 });
+//
 const hostList = [
 	{
 		name: 'host1',
@@ -75,3 +79,25 @@ export const handlers = [
 		return res(ctx.status(200), ctx.json(updatedOsInfo));
 	}),
 ];
+
+//
+// wss.on('connection', (ws) => {
+// 	ws.on('message', (message) => {
+// 		const { action } = JSON.parse(message.toString());
+
+// 		if (action === 'getHostList') {
+// 			ws.send(JSON.stringify({ dataName: 'hostList', result: hostList }));
+// 		}
+
+// 		if (action === 'getOsInfo') {
+// 			setInterval(() => {
+// 				const updatedOsInfo = osInfo.map((info) => ({
+// 					...info,
+// 					cpu: Math.floor(Math.random() * 100),
+// 					memory: Math.floor(Math.random() * 100),
+// 				}));
+// 				ws.send(JSON.stringify({ dataName: 'osInfo', result: updatedOsInfo }));
+// 			}, 2000); // setInterval 함수의 닫는 괄호 추가
+// 		}
+// 	});
+// });
