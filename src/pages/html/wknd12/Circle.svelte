@@ -13,6 +13,7 @@
 		position: absolute;
 		top: 0;
 		left: -25%;
+		transition: top 0.5s ease-out;
 	}
 
 	.circle.outer .circle {
@@ -24,7 +25,7 @@
 		height: 400px;
 		position: relative;
 		overflow: hidden;
-		border: 7px solid #464343;
+		/* border: 7px solid #464343; */
 		border-radius: 100%;
 		background: linear-gradient(#3c5aff, #52f2fd);
 		transform: translate3d(0, 0, 0);
@@ -229,6 +230,7 @@
 		});
 	});
 
+	//cpu memory cpu+mem 선택 변수
 	let selectedResource = '';
 	function handleSelectResource(
 		e: Event & {
@@ -237,6 +239,17 @@
 	) {
 		selectedResource = e.currentTarget.value;
 		console.log('SELECT:', selectedResource);
+	}
+
+	// host1 ~ host10 선택 변수
+	let selectedHost = '';
+	function handleSelectHost(
+		e: Event & {
+			currentTarget: EventTarget & HTMLSelectElement;
+		},
+	) {
+		selectedHost = e.currentTarget.value;
+		console.log('SELECT:', selectedHost);
 	}
 </script>
 

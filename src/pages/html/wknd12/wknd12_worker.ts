@@ -1,27 +1,7 @@
-// 웹 소켓 연결하기
-const ws = new WebSocket('ws:localhost:8080');
-
-ws.onopen = () => {
-	console.log('연결! WebSocket');
-};
-
-ws.onmessage = (event) => {
-	const message = JSON.parse(event.data);
-	const { dataName, result } = message;
-
-	if (dataName === 'hostList') {
-		postMessage({ dataName, result });
-		ws.send(JSON.stringify({ action: getOsInfo }));
-	}
-
-	if (dataName === 'osInfo') {
-		postMessage({ dataName, result });
-	}
-};
-//
 let hostList = [];
 let osInfo = [];
 
+// Host-List 생성 함수
 function getHostList() {
 	return fetch('/hostList', { method: 'GET' })
 		.then((response) => response.json())
@@ -34,6 +14,7 @@ function getHostList() {
 		});
 }
 
+// Os-Info random 생성 함수
 function getOsInfo() {
 	return fetch('/osInfo', { method: 'GET' })
 		.then((response) => response.json())
