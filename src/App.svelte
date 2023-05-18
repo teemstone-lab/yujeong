@@ -5,7 +5,10 @@
 
 <Router routes="{routes}" /> -->
 <style>
-	ul {
+	.table {
+		width: 100%;
+	}
+	.table ul {
 		padding: 20px;
 		background: black;
 		color: rgb(118, 118, 2);
@@ -15,7 +18,7 @@
 	}
 	/* ul li {
 	} */
-	ul li div.on {
+	.table ul li div.on {
 		color: yellow;
 	}
 </style>
@@ -30,6 +33,7 @@
 	import SelectAdd from './pages/html/wknd11/practice_AppFruit.svelte';
 	import FruitStore from './pages/html/wknd11/wknd11_FruitShop.svelte';
 	import FruitStore2 from './pages/html/wknd11/pr2_appFruit.svelte';
+	import MSW from './pages/html/wknd12/wknd12_main.svelte';
 
 	// import Nav from './components/nav/Nav.svelte';
 
@@ -40,45 +44,69 @@
 		const target = e.target as HTMLButtonElement;
 		currentPage = target.innerText;
 	};
+
+	let isMswLoad;
+	const initMsw = async () => {
+		const { worker } = await import('./mocks/browser');
+		worker
+			.start()
+			.then((res) => (isMswLoad = true))
+			.catch((err: { message: string }) => {
+				throw new Error(err.message);
+			});
+	};
+	initMsw();
+
+	// $: {
+	// 	console.log(isMswLoad);
+	// }
 </script>
 
-<ul>
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'WebWorker' ? 'on' : ''}`}"> WebWorker</div>
-		</button></li
-	>
+<div class="table">
+	<ul>
+		<li
+			><button on:click="{clickHandler}">
+				<div class="{`${currentPage === 'WebWorker' ? 'on' : ''}`}"> WebWorker</div>
+			</button></li
+		>
 
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'TodoList1' ? 'on' : ''}`}"> TodoList1</div>
-		</button></li
-	>
+		<li
+			><button on:click="{clickHandler}">
+				<div class="{`${currentPage === 'TodoList1' ? 'on' : ''}`}"> TodoList1</div>
+			</button></li
+		>
 
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'TodoList2' ? 'on' : ''}`}"> TodoList2</div>
-		</button></li
-	>
+		<li
+			><button on:click="{clickHandler}">
+				<div class="{`${currentPage === 'TodoList2' ? 'on' : ''}`}"> TodoList2</div>
+			</button></li
+		>
 
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'SelectAdd' ? 'on' : ''}`}"> SelectAdd</div>
-		</button></li
-	>
+		<li
+			><button on:click="{clickHandler}">
+				<div class="{`${currentPage === 'SelectAdd' ? 'on' : ''}`}"> SelectAdd</div>
+			</button></li
+		>
 
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'drag/drop' ? 'on' : ''}`}"> drag/drop</div>
-		</button></li
-	>
+		<li
+			><button on:click="{clickHandler}">
+				<div class="{`${currentPage === 'drag/drop' ? 'on' : ''}`}"> drag/drop</div>
+			</button></li
+		>
 
-	<li
-		><button on:click="{clickHandler}">
-			<div class="{`${currentPage === 'FruitStore2' ? 'on' : ''}`}"> FruitStore2</div>
-		</button></li
-	>
-</ul>
+		<li
+			><button on:click="{clickHandler}">
+				<div class="{`${currentPage === 'FruitStore2' ? 'on' : ''}`}"> FruitStore2</div>
+			</button></li
+		>
+
+		<li
+			><button on:click="{clickHandler}">
+				<div class="{`${currentPage === 'MSW' ? 'on' : ''}`}"> MSW</div>
+			</button></li
+		>
+	</ul>
+</div>
 
 <main>
 	{#if currentPage === 'index'}
@@ -107,5 +135,9 @@
 
 	{#if currentPage === 'FruitStore2'}
 		<div class="wrapper"><FruitStore2 /></div>
+	{/if}
+
+	{#if currentPage === 'MSW'}
+		<div class="wrapper"><MSW /></div>
 	{/if}
 </main>
