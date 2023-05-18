@@ -45,15 +45,37 @@
 		currentPage = target.innerText;
 	};
 
+	// let isMswLoad;
+	// const initMsw = async () => {
+	// 	const { worker } = await import('./mocks/browser');
+	// 	worker
+	// 		.start()
+	// 		.then((res) => (isMswLoad = true))
+	// 		.catch((err: { message: string }) => {
+	// 			throw new Error(err.message);
+	// 		});
+	// };
+	// initMsw();
+
 	let isMswLoad;
 	const initMsw = async () => {
 		const { worker } = await import('./mocks/browser');
-		worker
-			.start()
-			.then((res) => (isMswLoad = true))
-			.catch((err: { message: string }) => {
-				throw new Error(err.message);
-			});
+		if (location.hostname === 'teemstone-lab.github.io') {
+			worker
+				.start({
+					serviceWorker: {
+						url: '/yujeong/mockServiceWorker.js',
+					},
+				})
+				.catch((error) => console.error(error));
+		} else {
+			worker
+				.start()
+				.then((res) => (isMswLoad = true))
+				.catch((err: { message: string }) => {
+					throw new Error(err.message);
+				});
+		}
 	};
 	initMsw();
 
