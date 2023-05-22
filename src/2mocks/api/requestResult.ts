@@ -12,7 +12,7 @@ const handlers = [
 		return res(ctx.json(hostList));
 	}),
 
-	rest.get('/osInfo', (req, res, ctx) => {
+	rest.get('/osInfo', (_, res, ctx) => {
 		const updatedOsInfo = osInfo.map((info) => ({
 			...info,
 			cpu: Math.floor(Math.random() * 100),

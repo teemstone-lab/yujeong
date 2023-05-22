@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Mon May 22 2023 14:38:55 GMT+0900 (대한민국 표준시)
+ * File generated Mon May 22 2023 17:08:57 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-22T05:38:55.183Z"
+export const __timestamp = "2023-05-22T08:08:57.228Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -763,7 +763,33 @@ export const _tree = {
           "ext": "",
           "badExt": false,
           "absolutePath": "E:/project/yujeong/src/pages/html/wknd12+1",
-          "children": [],
+          "children": [
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "2m-main.svelte",
+              "filepath": "/html/wknd12+1/2m-main.svelte",
+              "name": "2m-main",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12+1/2m-main.svelte",
+              "importPath": "../src/pages/html/wknd12+1/2m-main.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/wknd12+1/2m-main",
+              "id": "_html_wknd12_1_2mMain",
+              "component": () => import('../src/pages/html/wknd12+1/2m-main.svelte').then(m => m.default)
+            }
+          ],
           "isLayout": false,
           "isReset": false,
           "isIndex": false,
