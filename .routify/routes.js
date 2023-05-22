@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Fri May 19 2023 05:27:22 GMT+0900 (대한민국 표준시)
+ * File generated Mon May 22 2023 14:38:55 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-18T20:27:22.416Z"
+export const __timestamp = "2023-05-22T05:38:55.183Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -32,7 +32,7 @@ export const _tree = {
       "name": "html",
       "ext": "",
       "badExt": false,
-      "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html",
+      "absolutePath": "E:/project/yujeong/src/pages/html",
       "children": [
         {
           "isFile": false,
@@ -42,7 +42,7 @@ export const _tree = {
           "name": "components",
           "ext": "",
           "badExt": false,
-          "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components",
+          "absolutePath": "E:/project/yujeong/src/pages/html/components",
           "children": [
             {
               "isFile": true,
@@ -52,7 +52,7 @@ export const _tree = {
               "name": "Body",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/Body.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/Body.svelte",
               "importPath": "../src/pages/html/components/Body.svelte",
               "isLayout": false,
               "isReset": false,
@@ -77,7 +77,7 @@ export const _tree = {
               "name": "ChartTab",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/ChartTab.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/ChartTab.svelte",
               "importPath": "../src/pages/html/components/ChartTab.svelte",
               "isLayout": false,
               "isReset": false,
@@ -102,7 +102,7 @@ export const _tree = {
               "name": "Footer",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/Footer.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/Footer.svelte",
               "importPath": "../src/pages/html/components/Footer.svelte",
               "isLayout": false,
               "isReset": false,
@@ -127,7 +127,7 @@ export const _tree = {
               "name": "Header",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/Header.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/Header.svelte",
               "importPath": "../src/pages/html/components/Header.svelte",
               "isLayout": false,
               "isReset": false,
@@ -152,7 +152,7 @@ export const _tree = {
               "name": "HostTree",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/HostTree.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/HostTree.svelte",
               "importPath": "../src/pages/html/components/HostTree.svelte",
               "isLayout": false,
               "isReset": false,
@@ -177,7 +177,7 @@ export const _tree = {
               "name": "pr2_Fruit",
               "ext": "",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/pr2_Fruit",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/pr2_Fruit",
               "children": [
                 {
                   "isFile": true,
@@ -187,7 +187,7 @@ export const _tree = {
                   "name": "FruitProducts",
                   "ext": "svelte",
                   "badExt": false,
-                  "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/pr2_Fruit/FruitProducts.svelte",
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/pr2_Fruit/FruitProducts.svelte",
                   "importPath": "../src/pages/html/components/pr2_Fruit/FruitProducts.svelte",
                   "isLayout": false,
                   "isReset": false,
@@ -212,7 +212,7 @@ export const _tree = {
                   "name": "FruitsShop",
                   "ext": "svelte",
                   "badExt": false,
-                  "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/pr2_Fruit/FruitsShop.svelte",
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/pr2_Fruit/FruitsShop.svelte",
                   "importPath": "../src/pages/html/components/pr2_Fruit/FruitsShop.svelte",
                   "isLayout": false,
                   "isReset": false,
@@ -251,7 +251,7 @@ export const _tree = {
               "name": "TodoHeader",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/TodoHeader.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/TodoHeader.svelte",
               "importPath": "../src/pages/html/components/TodoHeader.svelte",
               "isLayout": false,
               "isReset": false,
@@ -276,7 +276,7 @@ export const _tree = {
               "name": "TodoItem",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/TodoItem.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/TodoItem.svelte",
               "importPath": "../src/pages/html/components/TodoItem.svelte",
               "isLayout": false,
               "isReset": false,
@@ -301,7 +301,7 @@ export const _tree = {
               "name": "TodoList",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/TodoList.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/TodoList.svelte",
               "importPath": "../src/pages/html/components/TodoList.svelte",
               "isLayout": false,
               "isReset": false,
@@ -326,7 +326,7 @@ export const _tree = {
               "name": "wknd11_Todo",
               "ext": "",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/wknd11_Todo",
+              "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Todo",
               "children": [
                 {
                   "isFile": true,
@@ -336,7 +336,7 @@ export const _tree = {
                   "name": "ItemTitle",
                   "ext": "svelte",
                   "badExt": false,
-                  "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/wknd11_Todo/ItemTitle.svelte",
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Todo/ItemTitle.svelte",
                   "importPath": "../src/pages/html/components/wknd11_Todo/ItemTitle.svelte",
                   "isLayout": false,
                   "isReset": false,
@@ -361,7 +361,7 @@ export const _tree = {
                   "name": "TodoInput11",
                   "ext": "svelte",
                   "badExt": false,
-                  "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/wknd11_Todo/TodoInput11.svelte",
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Todo/TodoInput11.svelte",
                   "importPath": "../src/pages/html/components/wknd11_Todo/TodoInput11.svelte",
                   "isLayout": false,
                   "isReset": false,
@@ -386,7 +386,7 @@ export const _tree = {
                   "name": "TodoItem11",
                   "ext": "svelte",
                   "badExt": false,
-                  "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/wknd11_Todo/TodoItem11.svelte",
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Todo/TodoItem11.svelte",
                   "importPath": "../src/pages/html/components/wknd11_Todo/TodoItem11.svelte",
                   "isLayout": false,
                   "isReset": false,
@@ -411,7 +411,7 @@ export const _tree = {
                   "name": "TodoList11",
                   "ext": "svelte",
                   "badExt": false,
-                  "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/components/wknd11_Todo/TodoList11.svelte",
+                  "absolutePath": "E:/project/yujeong/src/pages/html/components/wknd11_Todo/TodoList11.svelte",
                   "importPath": "../src/pages/html/components/wknd11_Todo/TodoList11.svelte",
                   "isLayout": false,
                   "isReset": false,
@@ -464,7 +464,7 @@ export const _tree = {
           "name": "wknd9_main",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd9_main.svelte",
+          "absolutePath": "E:/project/yujeong/src/pages/html/wknd9_main.svelte",
           "importPath": "../src/pages/html/wknd9_main.svelte",
           "isLayout": false,
           "isReset": false,
@@ -489,7 +489,7 @@ export const _tree = {
           "name": "wknd10_AppTodo",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd10_AppTodo.svelte",
+          "absolutePath": "E:/project/yujeong/src/pages/html/wknd10_AppTodo.svelte",
           "importPath": "../src/pages/html/wknd10_AppTodo.svelte",
           "isLayout": false,
           "isReset": false,
@@ -514,7 +514,7 @@ export const _tree = {
           "name": "wknd11",
           "ext": "",
           "badExt": false,
-          "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd11",
+          "absolutePath": "E:/project/yujeong/src/pages/html/wknd11",
           "children": [
             {
               "isFile": true,
@@ -524,7 +524,7 @@ export const _tree = {
               "name": "pr2_appFruit",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd11/pr2_appFruit.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/pr2_appFruit.svelte",
               "importPath": "../src/pages/html/wknd11/pr2_appFruit.svelte",
               "isLayout": false,
               "isReset": false,
@@ -549,7 +549,7 @@ export const _tree = {
               "name": "practice_AppFruit",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd11/practice_AppFruit.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/practice_AppFruit.svelte",
               "importPath": "../src/pages/html/wknd11/practice_AppFruit.svelte",
               "isLayout": false,
               "isReset": false,
@@ -574,7 +574,7 @@ export const _tree = {
               "name": "practice_AppTodo",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd11/practice_AppTodo.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/practice_AppTodo.svelte",
               "importPath": "../src/pages/html/wknd11/practice_AppTodo.svelte",
               "isLayout": false,
               "isReset": false,
@@ -599,7 +599,7 @@ export const _tree = {
               "name": "practice_FruitsShop",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd11/practice_FruitsShop.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/practice_FruitsShop.svelte",
               "importPath": "../src/pages/html/wknd11/practice_FruitsShop.svelte",
               "isLayout": false,
               "isReset": false,
@@ -624,7 +624,7 @@ export const _tree = {
               "name": "wknd11_FruitShop",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd11/wknd11_FruitShop.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd11/wknd11_FruitShop.svelte",
               "importPath": "../src/pages/html/wknd11/wknd11_FruitShop.svelte",
               "isLayout": false,
               "isReset": false,
@@ -663,7 +663,7 @@ export const _tree = {
           "name": "wknd12",
           "ext": "",
           "badExt": false,
-          "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd12",
+          "absolutePath": "E:/project/yujeong/src/pages/html/wknd12",
           "children": [
             {
               "isFile": true,
@@ -673,7 +673,7 @@ export const _tree = {
               "name": "Circle",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd12/Circle.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12/Circle.svelte",
               "importPath": "../src/pages/html/wknd12/Circle.svelte",
               "isLayout": false,
               "isReset": false,
@@ -698,7 +698,7 @@ export const _tree = {
               "name": "Gauge_window",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd12/Gauge_window.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12/Gauge_window.svelte",
               "importPath": "../src/pages/html/wknd12/Gauge_window.svelte",
               "isLayout": false,
               "isReset": false,
@@ -723,7 +723,7 @@ export const _tree = {
               "name": "wknd12_main",
               "ext": "svelte",
               "badExt": false,
-              "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/html/wknd12/wknd12_main.svelte",
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12/wknd12_main.svelte",
               "importPath": "../src/pages/html/wknd12/wknd12_main.svelte",
               "isLayout": false,
               "isReset": false,
@@ -753,6 +753,29 @@ export const _tree = {
             "prerender": true
           },
           "path": "/html/wknd12"
+        },
+        {
+          "isFile": false,
+          "isDir": true,
+          "file": "wknd12+1",
+          "filepath": "/html/wknd12+1",
+          "name": "wknd12+1",
+          "ext": "",
+          "badExt": false,
+          "absolutePath": "E:/project/yujeong/src/pages/html/wknd12+1",
+          "children": [],
+          "isLayout": false,
+          "isReset": false,
+          "isIndex": false,
+          "isFallback": false,
+          "isPage": false,
+          "ownMeta": {},
+          "meta": {
+            "recursive": true,
+            "preload": false,
+            "prerender": true
+          },
+          "path": "/html/wknd12+1"
         }
       ],
       "isLayout": false,
@@ -776,7 +799,7 @@ export const _tree = {
       "name": "index",
       "ext": "svelte",
       "badExt": false,
-      "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/index.svelte",
+      "absolutePath": "E:/project/yujeong/src/pages/index.svelte",
       "importPath": "../src/pages/index.svelte",
       "isLayout": false,
       "isReset": false,
@@ -801,7 +824,7 @@ export const _tree = {
       "name": "test",
       "ext": "",
       "badExt": false,
-      "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/test",
+      "absolutePath": "E:/project/yujeong/src/pages/test",
       "children": [
         {
           "isFile": true,
@@ -811,7 +834,7 @@ export const _tree = {
           "name": "[slug]",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/test/[slug].svelte",
+          "absolutePath": "E:/project/yujeong/src/pages/test/[slug].svelte",
           "importPath": "../src/pages/test/[slug].svelte",
           "isLayout": false,
           "isReset": false,
@@ -836,7 +859,7 @@ export const _tree = {
           "name": "array",
           "ext": "svelte",
           "badExt": false,
-          "absolutePath": "C:/Users/LG/Desktop/yujeong/src/pages/test/array.svelte",
+          "absolutePath": "E:/project/yujeong/src/pages/test/array.svelte",
           "importPath": "../src/pages/test/array.svelte",
           "isLayout": false,
           "isReset": false,

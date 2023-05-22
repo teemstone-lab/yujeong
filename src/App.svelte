@@ -56,10 +56,39 @@
 	// 		});
 	// };
 	// initMsw();
+	////////////////// 아래랑 같은 코드
 
-	let isMswLoad;
-	const initMsw = async () => {
-		const { worker } = await import('./mocks/browser');
+	// let isMswLoad;
+	// const initMsw = async () => {
+	// 	const { worker } = await import('./mocks/browser');
+	// 	if (location.hostname === 'teemstone-lab.github.io') {
+	// 		worker
+	// 			.start({
+	// 				serviceWorker: {
+	// 					url: '/yujeong/mockServiceWorker.js',
+	// 				},
+	// 			})
+	// 			.catch((error) => console.error(error));
+	// 	} else {
+	// 		worker
+	// 			.start()
+	// 			.then((res) => (isMswLoad = true))
+	// 			.catch((err: { message: string }) => {
+	// 				throw new Error(err.message);
+	// 			});
+	// 	}
+	// };
+	// initMsw();
+
+	// $: {
+	// 	console.log(isMswLoad);
+	// }
+
+	///////////////////////////// 위까지 mock1
+
+	let is2MswLoad;
+	const init2Msw = async () => {
+		const { worker } = await import('./2mocks/browser');
 		if (location.hostname === 'teemstone-lab.github.io') {
 			worker
 				.start({
@@ -71,17 +100,13 @@
 		} else {
 			worker
 				.start()
-				.then((res) => (isMswLoad = true))
+				.then((res) => (is2MswLoad = true))
 				.catch((err: { message: string }) => {
 					throw new Error(err.message);
 				});
 		}
 	};
-	initMsw();
-
-	// $: {
-	// 	console.log(isMswLoad);
-	// }
+	init2Msw();
 </script>
 
 <div class="table">
