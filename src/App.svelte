@@ -34,6 +34,7 @@
 	import FruitStore from './pages/html/wknd11/wknd11_FruitShop.svelte';
 	import FruitStore2 from './pages/html/wknd11/pr2_appFruit.svelte';
 	import MSW from './pages/html/wknd12/wknd12_main.svelte';
+	import MSW2 from './pages/html/wknd12+1/2m-main.svelte';
 
 	// import Nav from './components/nav/Nav.svelte';
 
@@ -152,6 +153,12 @@
 				<div class="{`${currentPage === 'MSW' ? 'on' : ''}`}"> MSW</div>
 			</button></li
 		>
+
+		<li
+			><button on:click="{clickHandler}">
+				<div class="{`${currentPage === 'MSW2' ? 'on' : ''}`}"> MSW2</div>
+			</button></li
+		>
 	</ul>
 </div>
 
@@ -186,5 +193,8 @@
 
 	{#if currentPage === 'MSW'}
 		<div class="wrapper"><MSW /></div>
+	{/if}
+	{#if currentPage === 'MSW2'}
+		<div class="wrapper"><MSW2 /></div>
 	{/if}
 </main>

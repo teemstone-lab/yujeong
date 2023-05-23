@@ -1,3 +1,4 @@
+// 서비스 워커 셋업
 import { setupWorker } from 'msw';
 import handlers from './handlers';
 // This configures a Service Worker with the given request handlers.
