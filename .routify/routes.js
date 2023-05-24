@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Mon May 22 2023 17:08:57 GMT+0900 (대한민국 표준시)
+ * File generated Wed May 24 2023 14:23:36 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-22T08:08:57.228Z"
+export const __timestamp = "2023-05-24T05:23:36.916Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -788,6 +788,56 @@ export const _tree = {
               "path": "/html/wknd12+1/2m-main",
               "id": "_html_wknd12_1_2mMain",
               "component": () => import('../src/pages/html/wknd12+1/2m-main.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "ChartWindows-2m.svelte",
+              "filepath": "/html/wknd12+1/ChartWindows-2m.svelte",
+              "name": "ChartWindows-2m",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12+1/ChartWindows-2m.svelte",
+              "importPath": "../src/pages/html/wknd12+1/ChartWindows-2m.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/wknd12+1/ChartWindows-2m",
+              "id": "_html_wknd12_1_ChartWindows2m",
+              "component": () => import('../src/pages/html/wknd12+1/ChartWindows-2m.svelte').then(m => m.default)
+            },
+            {
+              "isFile": true,
+              "isDir": false,
+              "file": "Circle-2m.svelte",
+              "filepath": "/html/wknd12+1/Circle-2m.svelte",
+              "name": "Circle-2m",
+              "ext": "svelte",
+              "badExt": false,
+              "absolutePath": "E:/project/yujeong/src/pages/html/wknd12+1/Circle-2m.svelte",
+              "importPath": "../src/pages/html/wknd12+1/Circle-2m.svelte",
+              "isLayout": false,
+              "isReset": false,
+              "isIndex": false,
+              "isFallback": false,
+              "isPage": true,
+              "ownMeta": {},
+              "meta": {
+                "recursive": true,
+                "preload": false,
+                "prerender": true
+              },
+              "path": "/html/wknd12+1/Circle-2m",
+              "id": "_html_wknd12_1_Circle2m",
+              "component": () => import('../src/pages/html/wknd12+1/Circle-2m.svelte').then(m => m.default)
             }
           ],
           "isLayout": false,

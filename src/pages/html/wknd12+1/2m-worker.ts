@@ -34,23 +34,10 @@ function getOsInfo2() {
 		});
 }
 
-//4. 메인스레드에서 onMessage 받으면 실행할 내용
-onmessage = function (e) {
-	const message = e.data;
-	if (message === 'hostList') {
-		getHostList2();
-	}
-	if (message === 'osInfo') {
-		setInterval(() => {
-			getOsInfo2();
-		}, 2000);
-	}
-};
-
 //5. 응용) fetch 함수 모듈로 만들어보기
 //  인자로 받아야 하는 것. 경로, 옵션
-async function fetchGet(path) {
-	const url = '${dev2}/${path}';
+async function fetchGet(path: string) {
+	const url = `${dev2}/${path}`;
 	const result = await fetch(url);
 	const data = await result.json();
 	if (result.ok) {
@@ -61,12 +48,37 @@ async function fetchGet(path) {
 }
 
 //6. 응용) fetch 모듈로 기존 코드 교체
-function getOsInfo3() {
-	return fetchGet('/host')
+function getHostList3() {
+	return fetchGet('hostList')
 		.then((data) => {
-			console.log('fetchGet 함수 data', data);
+			console.log('fetchGet() HostList', data);
+			postMessage({ dataName: 'hostList', data });
 		})
 		.catch((error) => {
-			console.log('fetchGet 함수 error', error);
+			console.log('fetchGet() HostList error', error);
 		});
 }
+
+function getOsInfo3() {
+	return fetchGet('osInfo')
+		.then((data) => {
+			console.log('fetchGet() OsInfo', data);
+			postMessage({ dataName: 'osInfo', data });
+		})
+		.catch((error) => {
+			console.log('fetchGet() OsInfo error', error);
+		});
+}
+
+//4. 메인스레드에서 onMessage 받으면 실행할 내용
+onmessage = function (e) {
+	const message = e.data;
+	if (message === 'hostList') {
+		getHostList3();
+	}
+	if (message === 'osInfo') {
+		setInterval(() => {
+			getOsInfo3();
+		}, 2000);
+	}
+};
