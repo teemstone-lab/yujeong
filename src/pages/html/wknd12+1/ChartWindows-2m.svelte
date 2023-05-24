@@ -6,6 +6,7 @@
 
 	//1. Liquid Circle 컴포넌트 가져오기
 	//2. 필요한 html 생성
+
 	//3. 설정 아이콘 클릭으로 리소스 고르는 select-box 노출
 	let resourceBoxVisible = false;
 
@@ -19,14 +20,14 @@
 
 	//4. 리소스 select-box 에서 선택한 value 다루는 함수
 	// 선택된 리소스를 저장할 변수
-	let selectedResource;
+	let selectedResource: Array<'cpu' | 'memory'> = ['cpu'];
 	// cpu + memory 가 선택되면, 'cpu'랑 'memory' 값이 배열에 저장시키는 함수
 	const selectResourceHandler = (
 		e: Event & {
 			currentTarget: EventTarget & HTMLSelectElement;
 		},
 	) => {
-		let value = e.currentTarget.value;
+		let value = e.currentTarget.value as 'cpu' | 'memory' | 'cpuAndMemory';
 		if (value === 'cpuAndMemory') {
 			selectedResource = ['cpu', 'memory'];
 		} else {
@@ -50,6 +51,10 @@
 		console.log('selectedIndex', selectedIndex);
 		console.log('selectedHostId 는?', selectedHostId);
 	}
+
+	//6. 선택된 value 들을 차트와 연결해주기 위한 html 작성하기
+	// 최초 렌더링시 화면에 표시되는 호스트들의 index 저장하는 변수
+	let initialIndex: number;
 </script>
 
 <div>
@@ -73,7 +78,6 @@
 </div>
 
 <div>
-	<p>작업중 작업중 작업중</p>
 	<select on:change="{selectHostHandler2}">
 		<!-- 최초 렌더링시 host1 의 데이터로 차트 그리게 함 -->
 		<!-- <option value="{hostList[0].id}">고르세요</option> -->
@@ -83,6 +87,10 @@
 	</select>
 </div>
 
+<!-- 6. 선택된 value 들을 차트와 연결해주기 위한 html 작성하기 -->
 <div>
-	<Circle_2m />
+	<!-- 일단 resource 가 선택되고, osInfo 가 받아져 와있는 상태에 렌더링 -->
+	{#if selectedResource}
+		<Circle_2m />
+	{/if}
 </div>

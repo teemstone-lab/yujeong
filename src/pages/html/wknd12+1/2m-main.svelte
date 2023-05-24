@@ -64,11 +64,9 @@
 <div>
 	{#if isRenderReady}
 		{#each [0, 1, 2, 3] as index, i (i)}
-			{hostList}
+			<ChartWindows_2m hostList="{hostList}" />
 		{/each}
 	{/if}
 </div>
 
-<div>
-	<ChartWindows_2m hostList="{hostList}" />
-</div>
+<div> </div>
