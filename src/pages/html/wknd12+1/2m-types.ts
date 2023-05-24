@@ -2,4 +2,4 @@
 type Host = { name: string; id: string };
 export type HostList = Host[];
 type OsInfo = { name: string; cpu: number; memory: number };
-type OsInfoList = OsInfo[];
+export type OsInfoList = OsInfo[];

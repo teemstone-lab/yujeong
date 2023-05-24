@@ -21,11 +21,12 @@
 	// 	워커로부터 받은 데이터의 이름이 osInfo 라면, 변수 osInfo 에 저장
 	worker.onmessage = (e) => {
 		if (e.data.dataName === 'hostList') {
-			hostList = e.data.dataName;
+			hostList = e.data.data;
 			worker.postMessage('osInfo');
+			console.log('메인스레드 호스트리스트', hostList);
 		}
 		if (e.data.dataName === 'osInfo') {
-			osInfo = e.data.result;
+			osInfo = e.data.data;
 		}
 	};
 
@@ -69,5 +70,5 @@
 </div>
 
 <div>
-	<ChartWindows_2m />
+	<ChartWindows_2m hostList="{hostList}" />
 </div>

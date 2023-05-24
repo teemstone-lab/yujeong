@@ -1,19 +1,85 @@
-<script>
+<script lang="ts">
 	import Circle_2m from './Circle-2m.svelte';
+	import type { HostList } from './2m-types';
+	import { onMount } from 'svelte';
+	export let hostList: HostList;
 
 	//1. Liquid Circle 컴포넌트 가져오기
 	//2. 필요한 html 생성
+	//3. 설정 아이콘 클릭으로 리소스 고르는 select-box 노출
+	let resourceBoxVisible = false;
+
+	function toggleResourceBox() {
+		resourceBoxVisible = !resourceBoxVisible;
+	}
+
+	function keepResourceBoxVisible() {
+		resourceBoxVisible = true;
+	}
+
+	//4. 리소스 select-box 에서 선택한 value 다루는 함수
+	// 선택된 리소스를 저장할 변수
+	let selectedResource;
+	// cpu + memory 가 선택되면, 'cpu'랑 'memory' 값이 배열에 저장시키는 함수
+	const selectResourceHandler = (
+		e: Event & {
+			currentTarget: EventTarget & HTMLSelectElement;
+		},
+	) => {
+		let value = e.currentTarget.value;
+		if (value === 'cpuAndMemory') {
+			selectedResource = ['cpu', 'memory'];
+		} else {
+			selectedResource = [value];
+		}
+	};
+
+	//5. 호스트 select-box 에서 선택한 host 다루는 함수
+	// 선택된 호스트의 index를 저장할 변수
+	let selectedIndex;
+	// hostList 받아와서 each문으로 하나씩 그릴테니, 선택한 value랑 id랑 비교하는 함수
+	function selectHostHandler2(
+		e: Event & {
+			currentTarget: EventTarget & HTMLSelectElement;
+		},
+	) {
+		const selectedHostId = e.currentTarget.value;
+		selectedIndex = hostList.findIndex((host) => {
+			return host.id === selectedHostId;
+		});
+		console.log('selectedIndex', selectedIndex);
+		console.log('selectedHostId 는?', selectedHostId);
+	}
 </script>
 
 <div>
-	<button>⚙</button>
+	<button on:click="{toggleResourceBox}">⚙</button>
 </div>
 
 <div>
-	<select>
-		<option value="cpu">cpu</option>
-		<option value="memory">memory</option>
-		<opiton value="cpuAndMemory">cpu + memory</opiton>
+	{#if resourceBoxVisible}
+		<select
+			id="resourceBox"
+			on:change="{(e) => {
+				keepResourceBoxVisible();
+				selectResourceHandler(e);
+			}}"
+		>
+			<option value="cpu">cpu</option>
+			<option value="memory">memory</option>
+			<option value="cpuAndMemory">cpu + memory</option>
+		</select>
+	{/if}
+</div>
+
+<div>
+	<p>작업중 작업중 작업중</p>
+	<select on:change="{selectHostHandler2}">
+		<!-- 최초 렌더링시 host1 의 데이터로 차트 그리게 함 -->
+		<!-- <option value="{hostList[0].id}">고르세요</option> -->
+		{#each hostList as host}
+			<option value="{host.id}">{host.name}</option>
+		{/each}
 	</select>
 </div>
 
