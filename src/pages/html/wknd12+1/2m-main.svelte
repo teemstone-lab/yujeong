@@ -2,6 +2,7 @@
 	import type { HostList } from './2m-types';
 	import { onMount } from 'svelte';
 	import ChartWindows_2m from './ChartWindows-2m.svelte';
+	import { osInfoStore } from './2m-store';
 
 	//1. 로직에서 사용할 변수 정의
 	let hostList: HostList = [];
@@ -19,14 +20,16 @@
 	//4. 워커 실행1 결과 수신
 	//	워커로부터 받은 데이터의 이름이 hostList 라면, 변수 hostList에 저장하고, 워커에 다시 osInfo 데이터 요청하는 postMessage 보낼 것
 	// 	워커로부터 받은 데이터의 이름이 osInfo 라면, 변수 osInfo 에 저장
+	//  osInfo는 2초마다 값이 변경되므로, 스토어를 사용
 	worker.onmessage = (e) => {
 		if (e.data.dataName === 'hostList') {
 			hostList = e.data.data;
+			hostInitialize2(hostList);
 			worker.postMessage('osInfo');
 			console.log('메인스레드 호스트리스트', hostList);
 		}
 		if (e.data.dataName === 'osInfo') {
-			osInfo = e.data.data;
+			$osInfoStore = e.data.data;
 		}
 	};
 
@@ -38,6 +41,7 @@
 	// isVisible 프로퍼티의 초기값은 false 이고, true 일 경우에만 화면에 나타나게 할 것
 	// 속성이 추가된 hostList 를 업데이트
 	function hostInitialize2(hostList: HostList) {
+		console.log('이니셜라이징', hostList);
 		hostList.forEach((host, i) => {
 			if (i < 4) {
 				host.isVisible = true;
@@ -55,7 +59,7 @@
 	// $:{} 블록문은, 해당 블록 내의 변경을 감지하고 자동으로 업데이트
 	let isRenderReady: Boolean;
 	$: {
-		isRenderReady = hostList && osInfo;
+		isRenderReady = hostList && $osInfoStore.length > 0;
 	}
 </script>
 
@@ -64,7 +68,7 @@
 <div>
 	{#if isRenderReady}
 		{#each [0, 1, 2, 3] as index, i (i)}
-			<ChartWindows_2m hostList="{hostList}" />
+			<ChartWindows_2m hostList="{hostList}" initialIndex="{index}" />
 		{/each}
 	{/if}
 </div>

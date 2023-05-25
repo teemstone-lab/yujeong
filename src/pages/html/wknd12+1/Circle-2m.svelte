@@ -1,5 +1,14 @@
 <!-- 1. 원래의 컴포넌트 가져오기 -->
 <style>
+	.outer {
+		overflow: hidden;
+		border-radius: 0;
+		position: absolute;
+		top: 0;
+		left: -25%;
+		transition: top 0.5s ease-out;
+	}
+
 	.circle {
 		width: 400px;
 		height: 400px;
@@ -61,12 +70,29 @@
 </style>
 
 <script lang="ts">
+	// 메인스레드에서 받아온 데이터를 받을 변수
+	// value: gauge 높이 산출
+	// name: 자원 이름
+	// text: 실제 자원 사용률
+	export let value: number;
+	export let name: string = '';
+	export let text: string = '';
+
+	// gauge 높이 환산용 변수
+	let ratio: number;
+	// 실제 자원 사용률이 1일 때,
+	// Gauge 의 높이는 1.05
+	$: {
+		ratio = 100 * 1.05 - (value * 1.05 + 20);
+	}
 </script>
 
-<div class="circle">
-	<!-- wave -->
-	<div class="wave wave-one"></div>
-	<div class="wave wave-two"></div>
-	<div class="wave wave-three"></div>
-	<div class="wave wave-four"></div>
+<div class="circle outer transition-transform duration-500">
+	<div class="circle">
+		<!-- wave -->
+		<div class="wave wave-one"></div>
+		<div class="wave wave-two"></div>
+		<div class="wave wave-three"></div>
+		<div class="wave wave-four"></div>
+	</div>
 </div>
