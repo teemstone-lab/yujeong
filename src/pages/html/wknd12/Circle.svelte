@@ -161,7 +161,7 @@
 	<div class="relative flex basis-1/2 justify-center">
 		<div class="graph">
 			<div
-				class=" border-light-500 relative relative h-[300px] w-[300px] overflow-hidden rounded-full border-[4px] border-solid bg-white"
+				class=" border-light-500 relative h-[300px] w-[300px] overflow-hidden rounded-full border-[4px] border-solid bg-white"
 			>
 				{#if text}
 					<div

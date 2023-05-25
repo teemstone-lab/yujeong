@@ -3,7 +3,8 @@ let hostList = [];
 let osInfo = {};
 
 //2. 외부 https 경로 지정
-const dev2 = process.env.NODE_ENV === 'development' ? '' : 'https://teemstone-lab.github.io';
+// const dev2 = process.env.NODE_ENV === 'development' ? '' : 'https://teemstone-lab.github.io';
+const dev2 = process.env.NODE_ENV === 'development' ? '' : 'http://192.168.0.89:3000';
 
 //3. 워커 실행시 사용할 로직 정의
 //   즉시 실행, fetch API 사용

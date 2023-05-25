@@ -1,11 +1,20 @@
 <!-- 1. 원래의 컴포넌트 가져오기 -->
 <style>
+	/* tailwind 로 적용
+	.graph {
+		height: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	} */
+
 	.outer {
 		overflow: hidden;
+		background-color: red;
 		border-radius: 0;
 		position: absolute;
 		top: 0;
-		left: -25%;
+		left: -20%;
 		transition: top 0.5s ease-out;
 	}
 
@@ -70,7 +79,7 @@
 </style>
 
 <script lang="ts">
-	// 메인스레드에서 받아온 데이터를 받을 변수
+	// ChartWindows 에서 받아온 데이터를 받을 변수
 	// value: gauge 높이 산출
 	// name: 자원 이름
 	// text: 실제 자원 사용률
@@ -85,14 +94,54 @@
 	$: {
 		ratio = 100 * 1.05 - (value * 1.05 + 20);
 	}
+
+	// gauge 구간별 색상 지정용 변수
+	let gradeLevel = 1;
+
+	$: {
+		switch (true) {
+			case value > 89:
+				gradeLevel = 5;
+				break;
+			case value > 79:
+				gradeLevel = 4;
+				break;
+			case value > 69:
+				gradeLevel = 3;
+				break;
+			case value > 59:
+				gradeLevel = 2;
+				break;
+			default:
+				gradeLevel = 1;
+				break;
+		}
+	}
 </script>
 
-<div class="circle outer transition-transform duration-500">
-	<div class="circle">
-		<!-- wave -->
-		<div class="wave wave-one"></div>
-		<div class="wave wave-two"></div>
-		<div class="wave wave-three"></div>
-		<div class="wave wave-four"></div>
+<div class="flex h-[500px] items-center justify-center">
+	<div
+		id="outSide"
+		class="border-light-500
+		relative
+		h-[300px]
+		w-[300px]
+		overflow-hidden
+		rounded-full
+		border-[4px]
+		border-solid
+		bg-white"
+	>
+		<div>{text}</div>
+		<div>{name}</div>
+		<div class="circle outer transition-transform duration-500" style="{`top: ${ratio}%`}">
+			<div class="circle">
+				<!-- wave -->
+				<div class="wave wave-one"></div>
+				<div class="wave wave-two"></div>
+				<div class="wave wave-three"></div>
+				<div class="wave wave-four"></div>
+			</div>
+		</div>
 	</div>
 </div>
