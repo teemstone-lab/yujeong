@@ -39,7 +39,7 @@
 	// 워커에서 받아온 hostList 배열을 매개변수로 받을 것
 	// 매개변수로 받은 배열에 isVisibe 프로퍼티를 추가
 	// isVisible 프로퍼티의 초기값은 false 이고, true 일 경우에만 화면에 나타나게 할 것
-	// 속성이 추가된 hostList 를 업데이트
+	// 속성이 추가된 hostL!az@sx`1213ist 를 업데이트
 	function hostInitialize2(hostList: HostList) {
 		console.log('이니셜라이징', hostList);
 		hostList.forEach((host, i) => {
