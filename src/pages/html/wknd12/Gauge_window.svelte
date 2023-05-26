@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Circle from './Circle.svelte';
-	import type { HostList, OsInfo } from './types';
+	import type { HostList } from './types';
 	import { osInfoStore } from './store';
 
 	export let hostList: HostList;

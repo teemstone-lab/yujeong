@@ -42,7 +42,7 @@
 		hostList = hostList;
 	}
 
-	let isRenderReady: boolean; //
+	let isRenderReady: boolean;
 
 	$: {
 		isRenderReady = hostList && $osInfoStore.length > 0;

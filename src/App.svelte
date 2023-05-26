@@ -34,6 +34,7 @@
 	import FruitStore from './pages/html/wknd11/wknd11_FruitShop.svelte';
 	import FruitStore2 from './pages/html/wknd11/pr2_appFruit.svelte';
 	import MSW from './pages/html/wknd12/wknd12_main.svelte';
+	import MSW2 from './pages/html/wknd12+1/2m-main.svelte';
 
 	// import Nav from './components/nav/Nav.svelte';
 
@@ -56,11 +57,56 @@
 	// 		});
 	// };
 	// initMsw();
+	////////////////// 아래랑 같은 코드
 
-	let isMswLoad;
-	const initMsw = async () => {
-		const { worker } = await import('./mocks/browser');
-		if (location.hostname === 'teemstone-lab.github.io') {
+	// let isMswLoad;
+	// const initMsw = async () => {
+	// 	const { worker } = await import('./mocks/browser');
+	// 	if (location.hostname === 'teemstone-lab.github.io') {
+	// 		worker
+	// 			.start({
+	// 				serviceWorker: {
+	// 					url: '/yujeong/mockServiceWorker.js',
+	// 				},
+	// 			})
+	// 			.catch((error) => console.error(error));
+	// 	} else {
+	// 		worker
+	// 			.start()
+	// 			.then((res) => (isMswLoad = true))
+	// 			.catch((err: { message: string }) => {
+	// 				throw new Error(err.message);
+	// 			});
+	// 	}
+	// };
+	// initMsw();
+
+	// $: {
+	// 	console.log(isMswLoad);
+	// }
+
+	///////////////////////////// 위까지 mock1
+
+	let is2MswLoad;
+	const init2Msw = async () => {
+		const { worker } = await import('./2mocks/browser');
+		// if (location.hostname === 'teemstone-lab.github.io') {
+		// 	worker
+		// 		.start({
+		// 			serviceWorker: {
+		// 				url: '/yujeong/mockServiceWorker.js',
+		// 			},
+		// 		})
+		// 		.catch((error) => console.error(error));
+		// } else {
+		// 	worker
+		// 		.start()
+		// 		.then((res) => (is2MswLoad = true))
+		// 		.catch((err: { message: string }) => {
+		// 			throw new Error(err.message);
+		// 		});
+		// }
+		if (location.hostname === 'http://192.168.0.89:3000') {
 			worker
 				.start({
 					serviceWorker: {
@@ -71,17 +117,13 @@
 		} else {
 			worker
 				.start()
-				.then((res) => (isMswLoad = true))
+				.then((res) => (is2MswLoad = true))
 				.catch((err: { message: string }) => {
 					throw new Error(err.message);
 				});
 		}
 	};
-	initMsw();
-
-	// $: {
-	// 	console.log(isMswLoad);
-	// }
+	init2Msw();
 </script>
 
 <div class="table">
@@ -127,6 +169,12 @@
 				<div class="{`${currentPage === 'MSW' ? 'on' : ''}`}"> MSW</div>
 			</button></li
 		>
+
+		<li
+			><button on:click="{clickHandler}">
+				<div class="{`${currentPage === 'MSW2' ? 'on' : ''}`}"> MSW2</div>
+			</button></li
+		>
 	</ul>
 </div>
 
@@ -161,5 +209,8 @@
 
 	{#if currentPage === 'MSW'}
 		<div class="wrapper"><MSW /></div>
+	{/if}
+	{#if currentPage === 'MSW2'}
+		<div class="wrapper"><MSW2 /></div>
 	{/if}
 </main>

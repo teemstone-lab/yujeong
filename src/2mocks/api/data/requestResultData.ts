@@ -1,8 +1,6 @@
-import { rest } from 'msw';
 import { v4 as uuid } from 'uuid';
-// import { WebSocketServer } from 'ws';
 
-const hostList = [
+export const hostList = [
 	{
 		name: 'host1',
 		id: uuid(),
@@ -45,7 +43,7 @@ const hostList = [
 	},
 ];
 
-const osInfo = [
+export const osInfo = [
 	{ name: 'host1', cpu: 0, memory: 0, hostId: hostList[0].id },
 	{ name: 'host2', cpu: 0, memory: 0, hostId: hostList[1].id },
 	{ name: 'host3', cpu: 0, memory: 0, hostId: hostList[2].id },
@@ -58,17 +56,4 @@ const osInfo = [
 	{ name: 'host10', cpu: 0, memory: 0, hostId: hostList[9].id },
 ];
 
-export const handlers = [
-	rest.get('/hostList', (req, res, ctx) => {
-		return res(ctx.status(200), ctx.json(hostList));
-	}),
-
-	rest.get('/osInfo', (req, res, ctx) => {
-		const updatedOsInfo = osInfo.map((info) => ({
-			...info,
-			cpu: Math.floor(Math.random() * 100),
-			memory: Math.floor(Math.random() * 100),
-		}));
-		return res(ctx.status(200), ctx.json(updatedOsInfo));
-	}),
-];
+export const requestResultData = [hostList, osInfo];
