@@ -87,37 +87,22 @@
 
 	///////////////////////////// 위까지 mock1
 
-	let is2MswLoad;
+	// let is2MswLoad = false;
 	const init2Msw = async () => {
 		const { worker } = await import('./2mocks/browser');
-		// if (location.hostname === 'teemstone-lab.github.io') {
-		// 	worker
-		// 		.start({
-		// 			serviceWorker: {
-		// 				url: '/yujeong/mockServiceWorker.js',
-		// 			},
-		// 		})
-		// 		.catch((error) => console.error(error));
-		// } else {
-		// 	worker
-		// 		.start()
-		// 		.then((res) => (is2MswLoad = true))
-		// 		.catch((err: { message: string }) => {
-		// 			throw new Error(err.message);
-		// 		});
-		// }
-		if (location.hostname === 'http://192.168.0.89:3000') {
+		if (location.hostname === 'teemstone-lab.github.io') {
 			worker
 				.start({
 					serviceWorker: {
 						url: '/yujeong/mockServiceWorker.js',
 					},
 				})
+				// .then((res) => (is2MswLoad = true))
 				.catch((error) => console.error(error));
 		} else {
 			worker
 				.start()
-				.then((res) => (is2MswLoad = true))
+				// .then((res) => (is2MswLoad = true))
 				.catch((err: { message: string }) => {
 					throw new Error(err.message);
 				});

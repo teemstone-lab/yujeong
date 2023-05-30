@@ -1,8 +1,8 @@
 let hostList = [];
 let osInfo = {};
 
-// const dev = process.env.NODE_ENV === 'development' ? '' : 'https://teemstone-lab.github.io';
-const dev = process.env.NODE_ENV === 'development' ? '' : ' http://192.168.0.89:3000';
+const dev = process.env.NODE_ENV === 'development' ? '' : 'https://teemstone-lab.github.io';
+// const dev = process.env.NODE_ENV === 'development' ? '' : ' http://192.168.0.89:3000';
 
 // Host-List 생성 함수
 function getHostList() {
