@@ -79,7 +79,7 @@
 			{/each}
 		{/if}
 	</div>
-	<select on:change="{selectHostHandler}" class="h-[20px] w-[100px]" id="selectBox">
+	<select on:change="{selectHostHandler}" class="h-[30px] w-[100px]" id="selectBox">
 		<option value="{hostList[0].id}">select</option>
 		{#each hostList as host}
 			<option value="{host.id}">{host.name}</option>

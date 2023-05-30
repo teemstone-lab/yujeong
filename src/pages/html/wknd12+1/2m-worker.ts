@@ -3,13 +3,63 @@ let hostList = [];
 let osInfo = {};
 
 //2. 외부 https 경로 지정
-// const dev2 = process.env.NODE_ENV === 'development' ? '' : 'https://teemstone-lab.github.io';
-const dev2 = process.env.NODE_ENV === 'development' ? '' : 'http://192.168.0.89:3000';
+const dev2 = process.env.NODE_ENV === 'development' ? '' : 'https://teemstone-lab.github.io';
 
-//3. 워커 실행시 사용할 로직 정의
-//   즉시 실행, fetch API 사용
+//3. 워커 실행시 사용할 로직
+// get 옵션 fetch
+async function fetchGet(path: string) {
+	const url = `${dev2}/${path}`;
+	const result = await fetch(url);
+	const data = await result.json();
+	if (result.ok) {
+		return data;
+	} else {
+		throw Error(data);
+	}
+}
 
-// hostList data 호출하는 함수
+// hostList 데이터 호출
+function getHostList3() {
+	return fetchGet('hostList')
+		.then((data) => {
+			postMessage({ dataName: 'hostList', data });
+			// console.log('fetchGet() HostList', data);
+		})
+		.catch((error) => {
+			console.log('fetchGet() HostList error', error);
+		});
+}
+
+// Os-Info 데이터 호출
+function getOsInfo3() {
+	return fetchGet('osInfo')
+		.then((data) => {
+			postMessage({ dataName: 'osInfo', data });
+			// console.log('fetchGet() OsInfo', data);
+		})
+		.catch((error) => {
+			console.log('fetchGet() OsInfo error', error);
+		});
+}
+
+// postMessage 받으면 실행할 내용
+onmessage = function (e) {
+	const message = e.data;
+	if (message === 'hostList') {
+		getHostList3();
+	}
+	if (message === 'osInfo') {
+		setInterval(() => {
+			getOsInfo3();
+		}, 2000);
+	}
+};
+
+//
+//
+//
+// previous ver.
+// hostList 데이터 호출하는 함수
 function getHostList2() {
 	return fetch(`${dev2}/hostList`, { method: 'GET' })
 		.then((response) => response.json())
@@ -22,7 +72,7 @@ function getHostList2() {
 		});
 }
 
-// OS-info data 호출하는 함수
+// OS-info 데이터 호출하는 함수
 function getOsInfo2() {
 	return fetch(`${dev2}/osInfo`, { method: 'GET' })
 		.then((response) => response.json())
@@ -34,52 +84,3 @@ function getOsInfo2() {
 			console.log('getHostList 에러남', err.message);
 		});
 }
-
-//5. 응용) fetch 함수 모듈로 만들어보기
-//  인자로 받아야 하는 것. 경로, 옵션
-async function fetchGet(path: string) {
-	const url = `${dev2}/${path}`;
-	const result = await fetch(url);
-	const data = await result.json();
-	if (result.ok) {
-		return data;
-	} else {
-		throw Error(data);
-	}
-}
-
-//6. 응용) fetch 모듈로 기존 코드 교체
-function getHostList3() {
-	return fetchGet('hostList')
-		.then((data) => {
-			console.log('fetchGet() HostList', data);
-			postMessage({ dataName: 'hostList', data });
-		})
-		.catch((error) => {
-			console.log('fetchGet() HostList error', error);
-		});
-}
-
-function getOsInfo3() {
-	return fetchGet('osInfo')
-		.then((data) => {
-			console.log('fetchGet() OsInfo', data);
-			postMessage({ dataName: 'osInfo', data });
-		})
-		.catch((error) => {
-			console.log('fetchGet() OsInfo error', error);
-		});
-}
-
-//4. 메인스레드에서 onMessage 받으면 실행할 내용
-onmessage = function (e) {
-	const message = e.data;
-	if (message === 'hostList') {
-		getHostList3();
-	}
-	if (message === 'osInfo') {
-		setInterval(() => {
-			getOsInfo3();
-		}, 2000);
-	}
-};

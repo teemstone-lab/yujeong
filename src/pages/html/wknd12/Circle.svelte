@@ -1,6 +1,4 @@
 <style>
-	.wave {
-	}
 	.grade-1 .text {
 		color: #b1b1b1;
 	}

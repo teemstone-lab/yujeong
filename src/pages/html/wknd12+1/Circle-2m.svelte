@@ -1,21 +1,55 @@
-<!-- 1. 원래의 컴포넌트 가져오기 -->
 <style>
-	/* tailwind 로 적용
-	.graph {
-		height: 500px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	} */
+	.font .text {
+		text-transform: uppercase;
+	}
 
-	.outer {
+	.grade-1 .text {
+		color: #b1b1b1;
+	}
+	.grade-1 .circle.outer {
+		background-color: rgba(0, 0, 255, 0.6);
+	}
+
+	.grade-1 .wave {
+		background-color: rgba(0, 0, 255, 0.2);
+	}
+
+	.grade-2 .circle.outer {
+		background-color: rgba(5, 255, 0, 0.3);
+	}
+	.grade-2 .wave {
+		background-color: rgba(5, 255, 0, 0.2);
+	}
+
+	.grade-3 .circle.outer {
+		background-color: rgba(255, 229, 0, 0.3);
+	}
+	.grade-3 .wave {
+		background-color: rgba(255, 229, 0, 0.2);
+	}
+
+	.grade-4 .circle.outer {
+		background-color: rgba(255, 122, 0, 0.3);
+	}
+	.grade-4 .wave {
+		background-color: rgba(255, 122, 0, 0.2);
+	}
+
+	.grade-5 .circle.outer {
+		background-color: rgba(255, 0, 0, 0.3);
+	}
+	.grade-5 .wave {
+		background-color: rgba(255, 0, 0, 0.2);
+	}
+
+	.circle.outer {
 		overflow: hidden;
-		background-color: red;
 		border-radius: 0;
 		position: absolute;
 		top: 0;
-		left: -20%;
+		left: -25%;
 		transition: top 0.5s ease-out;
+		display: flex;
 	}
 
 	.circle {
@@ -23,11 +57,12 @@
 		height: 400px;
 		position: relative;
 		overflow: hidden;
-		border: 7px solid #464343;
+		/* border: 7px solid #464343; */
 		border-radius: 100%;
-		background: linear-gradient(#3c5aff, #52f2fd);
+		/* background: linear-gradient(#3c5aff, #52f2fd); */
 		transform: translate3d(0, 0, 0);
 		top: -50%;
+		display: flex;
 	}
 
 	.wave-one {
@@ -38,6 +73,7 @@
 		left: -30%;
 		border-radius: 45%;
 		animation: move 3s infinite linear;
+		display: flex;
 	}
 
 	.wave-two {
@@ -48,6 +84,7 @@
 		left: -30%;
 		border-radius: 45%;
 		animation: move 5s infinite linear;
+		display: flex;
 	}
 
 	.wave-three {
@@ -58,17 +95,19 @@
 		left: -30%;
 		border-radius: 45%;
 		animation: move 7s infinite linear;
+		display: flex;
 	}
 
 	.wave-four {
 		width: 650px;
 		height: 650px;
 		position: absolute;
-		top: -100%;
+		top: -103%;
 		left: -30%;
 		border-radius: 46%;
 		background: #fff !important;
 		animation: move 7s infinite linear;
+		display: flex;
 	}
 
 	@keyframes move {
@@ -80,67 +119,87 @@
 
 <script lang="ts">
 	// ChartWindows 에서 받아온 데이터를 받을 변수
-	// value: gauge 높이 산출
+	// value: 자원 사용률
 	// name: 자원 이름
-	// text: 실제 자원 사용률
+	// text: String(자원 사용률)
 	export let value: number;
 	export let name: string = '';
 	export let text: string = '';
 
-	// gauge 높이 환산용 변수
+	// Top 속성값 산출용 변수
 	let ratio: number;
 	// 실제 자원 사용률이 1일 때,
 	// Gauge 의 높이는 1.05
+	// Top 속성값은 105% - gauge 높이.
+	// 보정값 20
 	$: {
 		ratio = 100 * 1.05 - (value * 1.05 + 20);
 	}
 
 	// gauge 구간별 색상 지정용 변수
-	let gradeLevel = 1;
+	let alertLevel = 1;
 
 	$: {
 		switch (true) {
 			case value > 89:
-				gradeLevel = 5;
+				alertLevel = 5;
 				break;
 			case value > 79:
-				gradeLevel = 4;
+				alertLevel = 4;
 				break;
 			case value > 69:
-				gradeLevel = 3;
+				alertLevel = 3;
 				break;
 			case value > 59:
-				gradeLevel = 2;
+				alertLevel = 2;
 				break;
 			default:
-				gradeLevel = 1;
+				alertLevel = 1;
 				break;
 		}
 	}
 </script>
 
-<div class="flex h-[500px] items-center justify-center">
-	<div
-		id="outSide"
-		class="border-light-500
-		relative
-		h-[300px]
-		w-[300px]
+<div class="{`grade-${alertLevel} mt-2 flex  flex-row justify-center`}">
+	<div class="circleSection flex h-[400px] basis-1/2 items-center justify-center">
+		<div class="flex h-[500px] items-center justify-center">
+			<div
+				id="outerEdge"
+				class="border-light-500
+			relative
+		h-[250px]
+		w-[250px]
+		shrink
 		overflow-hidden
 		rounded-full
 		border-[4px]
 		border-solid
 		bg-white"
-	>
-		<div>{text}</div>
-		<div>{name}</div>
-		<div class="circle outer transition-transform duration-500" style="{`top: ${ratio}%`}">
-			<div class="circle">
-				<!-- wave -->
-				<div class="wave wave-one"></div>
-				<div class="wave wave-two"></div>
-				<div class="wave wave-three"></div>
-				<div class="wave wave-four"></div>
+			>
+				<!-- 범례 -->
+				<div class="font">
+					<div
+						class="text text-stroke-light-100 absolute top-[-9%] z-30 flex h-full w-full items-center justify-center text-[40px] font-bold text-green-800 bg-blend-overlay mix-blend-multiply"
+						>{text}</div
+					>
+					<div
+						class="text text-stroke-light-100 absolute top-[-9%] z-30 flex h-full w-full translate-y-[40px] items-center justify-center text-[26px]  font-bold text-green-800 bg-blend-overlay"
+						>{name}</div
+					>
+				</div>
+				<!-- Circle -->
+				<div
+					class="circle outer transition-transform duration-500"
+					style="{`top: ${ratio}%`}"
+				>
+					<div class="circle">
+						<!-- wave -->
+						<div class="wave wave-one"></div>
+						<div class="wave wave-two"></div>
+						<div class="wave wave-three"></div>
+						<div class="wave wave-four"></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.8
- * File generated Fri May 26 2023 13:46:46 GMT+0900 (대한민국 표준시)
+ * File generated Tue May 30 2023 12:28:05 GMT+0900 (대한민국 표준시)
  */
 
 export const __version = "2.18.8"
-export const __timestamp = "2023-05-26T04:46:46.933Z"
+export const __timestamp = "2023-05-30T03:28:05.098Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
